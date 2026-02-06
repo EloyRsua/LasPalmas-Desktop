@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Metadatos del documento-->
+    <meta charset="UTF-8" />
+    <!-- Codificación-->
+    <title>Las Palmas Gastronomía</title>
+    <!-- Titulo, el que aparece en la pestaña del navegador-->
+    <meta name="author" content="Eloy Rubio Suárez" />
+    <!-- Autor -->
+    <meta
+      name="description"
+      content="Página con la gastronomía de la provincia de Las Palmas"
+    />
+    <!-- Descripción breve del contenido-->
+    <meta
+      name="keywords"
+      content="LasPalmas, Islas, España, Comida, Gastronomía"
+    />
+    <!--Keywords-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono -->
+    <link rel="icon" href="multimedia/favicon.ico" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilo/layout.css">
+    <link rel="stylesheet" href="estilo/estilos.css">
+
+</head>
+  <body>
+    <header>
+      <!-- Cabecera compartida por todos los html -->
+      <!-- Datos con el contenidos que aparece en el navegador -->
+      <h1>
+        <a href="index.html">Las Palmas Desktop</a>
+      </h1>
+      <!-- Menú de la aplicación-->
+      <nav>
+        <a href="index.html" title="Página de inicio">Inicio</a>
+        <a href="gastronomia.html" title="Gastronomía" class="active">Gastronomía</a
+        >
+        <a href="rutas.html" title="Rutas">Rutas</a>
+        <a href="meteorologia.html" title="Información de la meteorología"
+          >Meteorología</a
+        >
+        <a href="juego.html" title="Juego">Juego</a>
+        <a href="reservas.php" title="Reservas">Reservas</a>
+        <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
+      </nav>
+    </header>
+
+    <!-- Migas de navegación -->
+    <p>
+      Estas en: <a href="index.html">Inicio</a> >> <strong>Gastronomía</strong>
+    </p>
+
+    <!-- Contenido principal del archivo-->
+    <main>
+      <h2>Sabores de Las Palmas</h2>
+
+      <p>
+        La gastronomía de Las Palmas destaca por su sencillez y la calidad de
+        sus productos volcánicos y marinos.
+      </p>
+
+      <section>
+        <h3>Resumen de Gastronomía</h3>
+        <table>
+          <caption>
+            Platos típicos de Las Palmas
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" id="categoria">Categoría</th>
+              <th scope="col" id="ejemplo">Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" id="p1">Plato Principal</th>
+              <td headers="categoria p1 ejemplo">Sancocho Canario</td>
+            </tr>
+            <tr>
+              <th scope="row" id="p2">Acompañante</th>
+              <td headers="categoria p2 ejemplo">Papas Arrugadas</td>
+            </tr>
+            <tr>
+              <th scope="row" id="p3">Salsa</th>
+              <td headers="categoria p3 ejemplo">Mojo Picón</td>
+            </tr>
+            <tr>
+              <th scope="row" id="p4">Postre</th>
+              <td headers="categoria p4 ejemplo">Bienmesabe</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <article>
+        <h3>Preparación de las Papas Arrugadas</h3>
+        <ol>
+          <li>Lavar bien las papas pequeñas sin quitar la piel.</li>
+          <li>Cocer en agua con abundante sal gorda y una rodaja de limón.</li>
+          <li>
+            Escurrir y dejar al fuego moviendo el caldero para secarlas y
+            arrugarlas.
+          </li>
+        </ol>
+
+        <picture>
+          <!-- Moviles -->
+          <source
+            srcset="multimedia/papas_movil.jpg"
+            media="(max-width: 465px)"
+          />
+          <!-- Tablets -->
+          <source
+            srcset="multimedia/papas_tablet.jpg"
+            media="(max-width: 799px)"
+          />
+          <!-- Ordenadores -->
+          <source
+            srcset="multimedia/papas_ordenador.jpg"
+            media="(min-width: 800px)"
+          />
+
+          <img alt="Papas Arrugadas y Mojos" src="multimedia/papas.webp" />
+        </picture>
+
+        <video controls>
+          <source src="multimedia/papas_video.mp4" type="video/mp4" />
+          <source src="multimedia/papas_video.webm" type="video/webm" />
+          Su navegador no soporta la reproducción de vídeo.
+        </video>
+      </article>
+
+      <article>
+        <h3>Variedades de Mojos y Salsas</h3>
+        <ul>
+          <li>Mojo Rojo (Picón): A base de pimienta palmera.</li>
+          <li>
+            Mojo Verde:
+            <ul>
+              <li>Variedad de Cilantro.</li>
+              <li>Variedad de Perejil.</li>
+            </ul>
+          </li>
+          <li>Alioli canario.</li>
+        </ul>
+      </article>
+
+      <aside>
+        <h3>Glosario Gastronómico</h3>
+        <dl>
+          <dt>Gofio</dt>
+          <dd>
+            Harina de cereales tostados, alimento base de los antiguos canarios.
+          </dd>
+          <dt>Queso de Flor</dt>
+          <dd>Queso artesanal cuajado con la flor del cardo (D.O.P. Guía).</dd>
+          <dt>Bienmesabe</dt>
+          <dd>Postre dulce hecho con almendras, miel, huevo y limón.</dd>
+        </dl>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
+      <address>
+        <p>Autor: Eloy Rubio Suárez</p>
+        <p>
+          Contacto: <a href="mailto:UO298184@uniovi.es">UO298184@uniovi.es</a>
+        </p>
+      </address>
+      <p>
+        Grado en Ingeniería Informática del Software - Escuela de Ingeniería
+        Informática
+      </p>
+    </footer>
+  </body>
+</html>

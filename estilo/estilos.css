@@ -1,0 +1,69 @@
+/**GENERAL*/
+body{
+    background-color: #F5F5DC;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    color: #005A8D;
+    text-decoration: none;
+}
+a:hover {
+    color: #00A3E0;
+}
+
+a.active {
+    color: #003D5F;
+    font-weight: bold;
+}
+h1 a{
+    color: #FFFFFF;
+}
+/*MIGAS*/
+header + p {
+    font-size: 0.85rem; 
+    color: #555555;   
+}
+/*NAVEGACION*/
+header {
+    background-color: #004685; 
+    padding:1em ;
+    border-radius: 0.8em;        
+}
+
+nav a {
+    color: #FFFFFF;            /* Letras blancas sobre el fondo azul */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: #FFD700;            /* Amarillo Canario para la página actual */
+}
+
+nav a:hover {
+    color: #87CEEB;            /* Azul cielo al pasar el ratón */
+}
+table {
+    width: 100%; /* Medida relativa para adaptabilidad [cite: 90] */
+    margin: 2rem 0; /* Unidades relativas rem */
+    border-collapse: collapse;
+    background-color: #FFFFFF; 
+    
+}
+th {
+    background-color: #004685; /* Azul oscuro  */
+    color: #E6F0FF; /* Azul clarito para contraste  */
+    padding: 0.8rem;
+    border: 0.0625rem solid #011840; 
+}
+
+/* ESPECIFICIDAD: 0,0,1 */
+/* Celdas de datos (td) */
+td {
+    padding: 0.8rem;
+    border: 0.0625rem solid #011840;
+    text-align: center;
+    /* El color de texto se hereda del body */
+}
