@@ -1,0 +1,28 @@
+
+/* ESPECIFICIDAD: 0,0,1 */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;    
+}
+
+/* ESPECIFICIDAD: 0,0,1 */
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.75em;
+}
+@media (min-width: 320px) and (max-width: 799px) {
+    /* ESPECIFICIDAD: 0,0,1 *//* ESPECIFICIDAD: 0,0,1 */
+    header, nav {
+        flex-direction: column; /* Advertencia: Redefinición provocada por la media query para la propiedad flex-direction */
+        align-items: center;    /* Advertencia: Redefinición provocada por la media query para la propiedad align-items */
+    }
+    /* ESPECIFICIDAD: 0,0,1 */
+    video {
+        width: 100%;
+        height: auto;
+    }
+}

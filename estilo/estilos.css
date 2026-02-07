@@ -1,3 +1,5 @@
+/* Eloy Rubio Suárez */
+
 /** GENERAL **/
 
 /* ESPECIFICIDAD: 0,0,1 */
@@ -5,34 +7,30 @@ body {
     background-color: #F5F5DC;
     color: #333333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Contraste: #333333 sobre #F5F5DC - Ratio ~9.5:1 (AAA) */
+    /* Contraste: color sobre background 11.41 (Nivel AAA) */
 }
 
 /* ESPECIFICIDAD: 0,0,1 */
 a {
-    color: #005A8D;
+    color: #005180;
     text-decoration: none;
-    /* Contraste: #005A8D sobre #F5F5DC - Ratio ~5.8:1 (AA) */
+    /* Contraste: a sobre bg body 7.62 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
 
-/* ESPECIFICIDAD: 0,0,2 */
+/* ESPECIFICIDAD: 0,1,1 */
 a:hover {
-    color: #004D75;
-    /* Contraste: #004D75 sobre #F5F5DC - Ratio ~7.1:1 (AAA) */
-    /* Color más oscuro que mantiene la tonalidad azul original */
+    color: #0D0D0D;
+    /* Contraste: a:hover sobre bg body 17.56 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
 
 /* ESPECIFICIDAD: 0,1,1 */
 a.activo {
     color: #003D5F;
     font-weight: bold;
-    /* Contraste: #003D5F sobre #F5F5DC - Ratio ~7.8:1 (AAA) */
-}
-
-/* ESPECIFICIDAD: 0,0,2 */
-h1 a {
-    color: #FFFFFF;
-    /* Contraste: #FFFFFF sobre #004685 - Ratio ~7.2:1 (AAA) */
+    /* Contraste: a.activo sobre bg body 10.35 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
 
 /** MIGAS DE NAVEGACIÓN **/
@@ -40,8 +38,9 @@ h1 a {
 /* ESPECIFICIDAD: 0,0,2 */
 header + p {
     font-size: 0.85rem; 
-    color: #555555;
-    /* Contraste: #555555 sobre #F5F5DC - Ratio ~5.5:1 (AA) */
+    color: #525252;
+    /* Contraste: migas sobre bg body 7.06 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
 
 /** ESTRUCTURA Y NAVEGACIÓN **/
@@ -51,45 +50,58 @@ header, footer {
     background-color: #004685; 
     padding: 1rem;
     border-radius: 0.8rem;
+    /* Advertencia herencia: El color de primer plano se hereda de body (#333333). 
+       No obstante, se redefine en sus elementos descendientes */
 }
 
 /* ESPECIFICIDAD: 0,0,2 */
-nav a {
+header a {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    /* Contraste: #FFFFFF sobre #004685 - Ratio ~7.2:1 (AAA) */
+    /* Contraste: color sobre bg header 9.48 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de header (#004685) */
 }
 
 /* ESPECIFICIDAD: 0,1,2 */
 nav a.activo {
-    color: #FFC700;
-    /* Contraste: #FFC700 sobre #004685 - Ratio ~7.5:1 (AAA) */
-    /* Amarillo ligeramente más oscuro que mantiene la apariencia dorada */
+    color: #FFDE66;
+    /* Contraste: color sobre bg header 7.17 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de nav, que lo hereda de header (#004685) */
 }
 
-/* ESPECIFICIDAD: 0,0,3 */
-nav a:hover {
-    color: #B3E5FC;
-    /* Contraste: #B3E5FC sobre #004685 - Ratio ~7.8:1 (AAA) */
-    /* Azul cielo más claro que mantiene la tonalidad original */
-}
-
-/* ESPECIFICIDAD: 0,1,3 */
-nav a.activo:hover {
-    color: #FFD966;
-    /* Contraste: #FFD966 sobre #004685 - Ratio ~8.2:1 (AAA) */
-    /* Amarillo más claro para el hover del enlace activo */
+/* ESPECIFICIDAD: 0,1,2 */
+header a:hover {
+    color: #CAECFC;
+    /* Contraste: color sobre bg header 7.63 (Nivel AAA) */
+    /* Advertencia herencia: El color de fondo se hereda de header (#004685) */
 }
 
 /** TABLA **/
 
 /* ESPECIFICIDAD: 0,0,1 */
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* El color de primer plano se hereda de body (#333333) 
+       sobre background heredado de body (#F5F5DC). Contraste: 11.41 (Nivel AAA) */
+}
+
+/* ESPECIFICIDAD: 0,0,1 */
+dt {
+    font-weight: bold;
+    font-style: italic;
+    /* El color de primer plano se hereda de body (#333333) 
+       sobre background heredado de body (#F5F5DC). Contraste: 11.41 (Nivel AAA) */
+}
+
+/* ESPECIFICIDAD: 0,0,1 */
 table {
     width: 100%;
     margin: 2rem 0;
-    border-collapse: collapse;
     background-color: #FFFFFF; 
+    border-collapse: collapse;
+    /* Advertencia herencia: El color de primer plano se hereda de body (#333333) */
 }
 
 /* ESPECIFICIDAD: 0,0,1 */
@@ -98,7 +110,7 @@ th {
     color: #E6F0FF;
     padding: 0.8rem;
     border: 0.0625rem solid #011840;
-    /* Contraste: #E6F0FF sobre #004685 - Ratio ~7.5:1 (AAA) */
+    /* Contraste: fg th sobre bg th 8.25 (Nivel AAA) */
 }
 
 /* ESPECIFICIDAD: 0,0,1 */
@@ -106,7 +118,8 @@ td {
     padding: 0.8rem;
     border: 0.0625rem solid #011840;
     text-align: center;
-    /* Contraste: #333333 sobre #FFFFFF - Ratio ~12.6:1 (AAA) */
+    /* El color de primer plano se hereda de body (#333333). 
+       Contraste sobre bg table (#FFFFFF): 12.63 (Nivel AAA) */
 }
 
 /** PIE DE PÁGINA **/
@@ -116,33 +129,12 @@ footer {
     color: #FFFFFF;
     margin-top: 2rem;
     text-align: center;
-    /* Contraste: #FFFFFF sobre #004685 - Ratio ~7.2:1 (AAA) */
+    /* Contraste: fg footer sobre bg footer 9.48 (Nivel AAA) */
 }
 
 /* ESPECIFICIDAD: 0,0,2 */
 footer p {
     margin: 0.5rem 0;
-    /* Contraste heredado: #FFFFFF sobre #004685 - Ratio ~7.2:1 (AAA) */
-}
-
-/* ESPECIFICIDAD: 0,0,2 */
-footer address {
-    font-style: normal;
-    display: block;
-    margin-top: 1rem;
-    /* Contraste heredado: #FFFFFF sobre #004685 - Ratio ~7.2:1 (AAA) */
-}
-
-/* ESPECIFICIDAD: 0,0,3 */
-footer address a {
-    color: #FFC700;
-    text-decoration: underline;
-    /* Contraste: #FFC700 sobre #004685 - Ratio ~7.5:1 (AAA) */
-}
-
-/* ESPECIFICIDAD: 0,0,4 */
-footer address a:hover {
-    color: #B3E5FC;
-    text-decoration: none;
-    /* Contraste: #B3E5FC sobre #004685 - Ratio ~7.8:1 (AAA) */
+    /* El color de primer plano se hereda de footer (#FFFFFF). 
+       Contraste sobre bg footer (#004685): 9.48 (Nivel AAA) */
 }
