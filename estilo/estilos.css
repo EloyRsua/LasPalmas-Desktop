@@ -177,10 +177,14 @@ main section article p a {
     color: #005A8D;
     text-decoration: underline;
     font-weight: 500;
+    /* Advertencia: El color de fondo se hereda de body */
+
 }
 
-/* ESPECIFICIDAD: 0,0,6 */
+/* ESPECIFICIDAD: 0,1,5 */
 /* Interacción con el enlace */
 main section article p a:hover {
     color: #00A3E0;
+    /* Advertencia: El color de fondo se hereda de body */
+
 }
