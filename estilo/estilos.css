@@ -138,3 +138,49 @@ footer p {
     /* El color de primer plano se hereda de footer (#FFFFFF). 
        Contraste sobre bg footer (#004685): 9.48 (Nivel AAA) */
 }
+/* ESPECIFICIDAD: 0,0,2 */
+/* Contenedor de noticias: la sección que sigue al carrusel */
+main section + section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.1rem solid #004685;
+}
+
+/* ESPECIFICIDAD: 0,0,3 */
+/* Cada noticia individual */
+main section article {
+    margin-bottom: 2rem;
+    /* Advertencia: El color de fondo se hereda de body (#F5F5DC) */
+}
+
+/* ESPECIFICIDAD: 0,0,4 */
+/* Titulares de las noticias */
+main section article h3 {
+    color: #003D5F;
+    font-size: 1.35rem;
+    margin: 0.5rem 0;
+    /* Advertencia: El color de fondo se hereda de body (#F5F5DC) */
+}
+
+/* ESPECIFICIDAD: 0,0,4 */
+/* Párrafos de descripción y enlaces */
+main section article p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    /* Advertencia: El color de texto se hereda de body (#333333) */
+}
+
+/* ESPECIFICIDAD: 0,0,5 */
+/* Enlaces a la noticia completa */
+main section article p a {
+    color: #005A8D;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* ESPECIFICIDAD: 0,0,6 */
+/* Interacción con el enlace */
+main section article p a:hover {
+    color: #00A3E0;
+}

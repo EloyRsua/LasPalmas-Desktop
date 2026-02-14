@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <!-- Metadatos del documento-->
     <meta charset="UTF-8" />
     <!-- Codificación-->
@@ -9,9 +8,15 @@
     <!-- Titulo, el que aparece en la pestaña del navegador-->
     <meta name="author" content="Eloy Rubio Suárez" />
     <!-- Autor -->
-    <meta name="description" content="Página con la gastronomía de la provincia de Las Palmas" />
+    <meta
+      name="description"
+      content="Página con la gastronomía de la provincia de Las Palmas"
+    />
     <!-- Descripción breve del contenido-->
-    <meta name="keywords" content="LasPalmas, Islas, España, Comida, Gastronomía" />
+    <meta
+      name="keywords"
+      content="LasPalmas, Islas, España, Comida, Gastronomía"
+    />
     <!--Keywords-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Icono -->
@@ -19,8 +24,8 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="estilo/layout.css" />
     <link rel="stylesheet" href="estilo/estilos.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <!-- Cabecera compartida por todos los html -->
       <!-- Datos con el contenidos que aparece en el navegador -->
@@ -30,9 +35,7 @@
       <!-- Menú de la aplicación-->
       <nav>
         <a href="index.html" title="Página de inicio" class="activo">Inicio</a>
-        <a href="gastronomia.html" title="Gastronomía" 
-          >Gastronomía</a
-        >
+        <a href="gastronomia.html" title="Gastronomía">Gastronomía</a>
         <a href="rutas.html" title="Rutas">Rutas</a>
         <a href="meteorologia.html" title="Información de la meteorología"
           >Meteorología</a
@@ -44,8 +47,40 @@
     </header>
 
     <!-- Migas de navegación -->
-    <p>
-      Estas en: Inicio
-    </p>
-</body>
+    <p>Estas en: Inicio</p>
+
+    <main>
+      <section>
+        <h2>Explora Las Palmas</h2>
+        <article>
+          <h3>Galería de Imágenes</h3>
+          <figure>
+            <img
+              src="multimedia/mapa_las_palmas.jpg"
+              alt="Mapa de situación de la provincia de Las Palmas"
+            />
+            <figcaption>Mapa de situación de la provincia</figcaption>
+            <button type="button">Anterior</button>
+            <button type="button">Siguiente</button>
+          </figure>
+        </article>
+      </section>
+
+      <section>
+        <h2>Últimas Noticias</h2>
+        <p>Cargando actualidad de la provincia...</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
+      <p>
+        Grado en Ingeniería Informática del Software - Escuela de Ingeniería
+        Informática de Oviedo
+      </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/noticias.js"></script>
+  </body>
 </html>

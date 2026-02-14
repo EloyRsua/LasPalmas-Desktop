@@ -25,4 +25,8 @@ nav {
         width: 100%;
         height: auto;
     }
+    /* ESPECIFICIDAD: 0,0,2 */
+    header + p {
+        display: none;
+    }
 }
