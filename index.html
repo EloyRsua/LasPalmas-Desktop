@@ -55,13 +55,28 @@
         <article>
           <h3>Galería de Imágenes</h3>
           <figure>
-            <img
-              src="multimedia/mapa_las_palmas.jpg"
-              alt="Mapa de situación de la provincia de Las Palmas"
-            />
+            <picture>
+              <source
+                media="(max-width: 465px)"
+                srcset="multimedia/mapa_las_palmas_movil.jpg"
+              />
+              <source
+                media="(max-width: 799px)"
+                srcset="multimedia/mapa_las_palmas_tablet.jpg"
+              />
+              <img
+                src="multimedia/mapa_las_palmas.jpg"
+                alt="Mapa de situación de la provincia de Las Palmas"
+              />
+            </picture>
             <figcaption>Mapa de situación de la provincia</figcaption>
-            <button type="button">Anterior</button>
-            <button type="button">Siguiente</button>
+
+            <button type="button" aria-label="Ver imagen anterior">
+              Anterior
+            </button>
+            <button type="button" aria-label="Ver imagen siguiente">
+              Siguiente
+            </button>
           </figure>
         </article>
       </section>

@@ -1,35 +1,66 @@
 /**
- * Clase Carrusel: Gestiona la galería de imágenes de la provincia
+ * Clase Carrusel: Gestiona la galería de imágenes adaptable y accesible
  * Eloy Rubio Suárez - UO298184
  */
 class Carrusel {
     constructor() {
-        // Mínimo 5 imágenes locales incluyendo el mapa [cite: 497, 498]
+        // Definimos las rutas para cada tamaño de pantalla para cumplir con la adaptabilidad [cite: 95]
         this.imagenes = [
-            { src: "multimedia/mapa_las_palmas.jpg", alt: "Mapa de situación de la provincia" },
-            { src: "multimedia/vegueta.jpg", alt: "Casco histórico de Vegueta en Las Palmas de Gran Canaria" },
-            { src: "multimedia/canteras.jpg", alt: "Playa de Las Canteras" },
-            { src: "multimedia/roque_nublo.jpg", alt: "Monumento Natural del Roque Nublo" },
-            { src: "multimedia/dunas.jpg", alt: "Reserva Natural de las Dunas de Maspalomas" }
+            {
+                base: "multimedia/mapa_las_palmas.jpg",
+                tablet: "multimedia/mapa_las_palmas_tablet.jpg",
+                movil: "multimedia/mapa_las_palmas_movil.jpg",
+                alt: "Mapa de situación de la provincia de Las Palmas"
+            },
+            {
+                base: "multimedia/vegueta.jpg",
+                tablet: "multimedia/vegueta_tablet.jpg",
+                movil: "multimedia/vegueta_movil.jpg",
+                alt: "Casco histórico de Vegueta en Las Palmas de Gran Canaria"
+            },
+            {
+                base: "multimedia/canteras.jpg",
+                tablet: "multimedia/canteras_tablet.jpg",
+                movil: "multimedia/canteras_movil.jpg",
+                alt: "Playa de Las Canteras en Las Palmas de Gran Canaria"
+            },
+            {
+                base: "multimedia/dunas.jpg",
+                tablet: "multimedia/dunas_tablet.jpg",
+                movil: "multimedia/dunas_movil.jpg",
+                alt: "Dunas de Maspalomas en Gran Canaria"
+            },
+            {
+                base: "multimedia/roque_nublo.jpg",
+                tablet: "multimedia/roque_nublo_tablet.jpg",
+                movil: "multimedia/roque_nublo_movil.jpg",
+                alt: "Roque Nublo, monumento natural de Gran Canaria"
+            }
         ];
         this.indice = 0;
         this.init();
     }
 
     init() {
-        const botones = $("main section:first-of-type button");
-        
+        const botones = $("main figure button");
         $(botones[0]).on("click", () => this.retroceder());
         $(botones[1]).on("click", () => this.avanzar());
     }
 
     actualizar() {
-        const img = $("main figure img");
-        const cap = $("main figure figcaption");
+        const item = this.imagenes[this.indice];
+        const picture = $("main figure picture");
         
-        img.attr("src", this.imagenes[this.indice].src);
-        img.attr("alt", this.imagenes[this.indice].alt);
-        cap.text(this.imagenes[this.indice].alt);
+        // Actualizamos las fuentes adaptables para móviles y tablets 
+        picture.find("source:nth-of-type(1)").attr("srcset", item.movil);
+        picture.find("source:nth-of-type(2)").attr("srcset", item.tablet);
+        
+        // Actualizamos la imagen base y el texto alternativo para accesibilidad 
+        const img = picture.find("img");
+        img.attr("src", item.base);
+        img.attr("alt", item.alt);
+        
+        $("main figure figcaption").text(item.alt);
     }
 
     avanzar() {
