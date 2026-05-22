@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos del documento-->
+    <meta charset="UTF-8" />
+    <title>Las Palmas Meteorología</title>
+    <meta name="author" content="Eloy Rubio Suárez" />
+    <meta
+      name="description"
+      content="Página con la meteorología de la provincia de Las Palmas"
+    />
+    <meta
+      name="keywords"
+      content="LasPalmas, Islas, España, Clima, Meteorología"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono -->
+    <link rel="icon" href="multimedia/favicon.ico" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilo/layout.css" />
+    <link rel="stylesheet" href="estilo/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Cabecera compartida por todos los html -->
+      <h1>
+        <a href="index.html">Las Palmas Desktop</a>
+      </h1>
+      <!-- Menú de la aplicación-->
+      <nav>
+        <a href="index.html" title="Página de inicio">Inicio</a>
+        <a href="gastronomia.html" title="Gastronomía">Gastronomía</a>
+        <a href="rutas.html" title="Rutas">Rutas</a>
+        <a href="meteorologia.html" title="Información de la meteorología" class="activo"
+          >Meteorología</a
+        >
+        <a href="juego.html" title="Juego">Juego</a>
+        <a href="reservas.php" title="Reservas">Reservas</a>
+        <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
+      </nav>
+    </header>
+
+    <!-- Migas de navegación -->
+    <p>
+      Estas en: <a href="index.html">Inicio</a> >> <strong>Meteorología</strong>
+    </p>
+
+    <!-- Contenido principal del archivo-->
+    <main>
+      <h2>El tiempo en Las Palmas de Gran Canaria</h2>
+
+      <section>
+        <h3>Información en tiempo real</h3>
+        <p>Cargando información en tiempo real...</p>
+      </section>
+
+      <section>
+        <h3>Previsión para los próximos 7 días</h3>
+        <p>Cargando previsión de los próximos días...</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
+      <p>
+        Grado en Ingeniería Informática del Software - Escuela de Ingeniería
+        Informática de Oviedo
+      </p>
+    </footer>
+
+    <!-- Dependencias de scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/meteorologia.js"></script>
+  </body>
+</html>

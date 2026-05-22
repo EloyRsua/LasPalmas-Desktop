@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="550" viewBox="0 0 950 550">
+  <!-- Estilos CSS internos -->
+  <style>
+    .titulo { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #111111; }
+    .eje-titulo { font-family: sans-serif; font-size: 12px; font-weight: bold; fill: #333333; }
+    .perfil-linea { fill: url(#gradiente-terreno); stroke: #0055ff; stroke-width: 3; }
+  </style>
+
+  <!-- Gradiente para el relleno de la altimetría -->
+  <defs>
+    <linearGradient id="gradiente-terreno" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0055ff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0055ff" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="100%" height="100%" fill="#fafafa"/>
+
+  <!-- Título de la ruta -->
+  <text x="90" y="35" class="titulo">Paseo Marítimo de la Playa de Las Canteras</text>
+
+  <!-- Cuadrícula y Escalas -->
+  <line x1="90" y1="400.00" x2="890" y2="400.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="404.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1 m</text>
+  <line x1="90" y1="332.00" x2="890" y2="332.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="336.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">2 m</text>
+  <line x1="90" y1="264.00" x2="890" y2="264.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="268.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">3 m</text>
+  <line x1="90" y1="196.00" x2="890" y2="196.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="200.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">3 m</text>
+  <line x1="90" y1="128.00" x2="890" y2="128.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="132.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">4 m</text>
+  <line x1="90" y1="60.00" x2="890" y2="60.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="64.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">5 m</text>
+  <line x1="90.00" y1="60" x2="90.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="90.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.00 km</text>
+  <line x1="250.00" y1="60" x2="250.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="250.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.62 km</text>
+  <line x1="410.00" y1="60" x2="410.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="410.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.24 km</text>
+  <line x1="570.00" y1="60" x2="570.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="570.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.85 km</text>
+  <line x1="730.00" y1="60" x2="730.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="730.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">2.47 km</text>
+  <line x1="890.00" y1="60" x2="890.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="890.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">3.09 km</text>
+
+  <!-- Ejes -->
+  <line x1="90" y1="60" x2="90" y2="400" stroke="#333333" stroke-width="2"/>
+  <line x1="90" y1="400" x2="890" y2="400" stroke="#333333" stroke-width="2"/>
+
+  <!-- Título de Ejes -->
+  <text x="40" y="45" class="eje-titulo" transform="rotate(-90, 40, 45)" text-anchor="middle">Altitud (metros)</text>
+  <text x="490.0" y="445" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+
+  <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
+  <polygon points="90,400 90.00,360.77 310.06,360.77 408.45,360.77 514.60,360.77 890.00,99.23 890.00,400 90,400" class="perfil-linea" />
+
+  <!-- Hitos, Marcadores y Etiquetas -->
+  <circle cx="90.00" cy="360.77" r="3" fill="#0055ff"/>
+  <line x1="90.00" y1="360.77" x2="90.00" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="90.00" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="90.00" y="435" transform="rotate(-90, 90.00, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">La Puntilla</text>
+  <text x="90.00" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
+  <circle cx="310.06" cy="360.77" r="3" fill="#0055ff"/>
+  <line x1="310.06" y1="360.77" x2="310.06" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="310.06" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="310.06" y="435" transform="rotate(-90, 310.06, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Playa Chica</text>
+  <text x="310.06" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
+  <circle cx="408.45" cy="360.77" r="3" fill="#0055ff"/>
+  <line x1="408.45" y1="360.77" x2="408.45" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="408.45" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="408.45" y="435" transform="rotate(-90, 408.45, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Peña de la Vieja</text>
+  <text x="408.45" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
+  <circle cx="514.60" cy="360.77" r="3" fill="#0055ff"/>
+  <line x1="514.60" y1="360.77" x2="514.60" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="514.60" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="514.60" y="435" transform="rotate(-90, 514.60, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Zona Canteras Central</text>
+  <text x="514.60" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
+  <circle cx="890.00" cy="99.23" r="3" fill="#0055ff"/>
+  <line x1="890.00" y1="99.23" x2="890.00" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="890.00" cy="99.23" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="890.00" y="435" transform="rotate(-90, 890.00, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Auditorio Alfredo Kraus</text>
+  <text x="890.00" y="91.23" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">5m</text>
+</svg>

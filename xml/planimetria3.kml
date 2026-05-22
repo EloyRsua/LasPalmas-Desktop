@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Paseo Marítimo de la Playa de Las Canteras</name>
+    <description>Planimetría generada automáticamente a partir de rutas.xml</description>
+    <Style id="ruta_linea">
+      <LineStyle>
+        <color>ff0000ff</color> <!-- Rojo opaco -->
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Placemark>
+      <name>Línea de Trayecto</name>
+      <styleUrl>#ruta_linea</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -15.4271,28.1491,2
+          -15.4312,28.1425,2
+          -15.4331,28.1395,2
+          -15.4348,28.1362,2
+          -15.4475,28.1301,5
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>La Puntilla</name>
+      <description>Extremo noreste de la playa donde amarran los barcos pesqueros tradicionales. (Altitud: 2m)</description>
+      <Point>
+        <coordinates>-15.4271,28.1491,2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Playa Chica</name>
+      <description>Zona familiar resguardada por la barra natural de arrecife de coral. (Altitud: 2m)</description>
+      <Point>
+        <coordinates>-15.4312,28.1425,2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Peña de la Vieja</name>
+      <description>Roca emblemática de arrecife que emerge cerca de la orilla de la playa. (Altitud: 2m)</description>
+      <Point>
+        <coordinates>-15.4331,28.1395,2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zona Canteras Central</name>
+      <description>Punto central del paseo marítimo, repleto de terrazas y heladerías frente al mar. (Altitud: 2m)</description>
+      <Point>
+        <coordinates>-15.4348,28.1362,2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Auditorio Alfredo Kraus</name>
+      <description>Impresionante edificio del arquitecto Óscar Tusquets que marca el fin de la playa. (Altitud: 5m)</description>
+      <Point>
+        <coordinates>-15.4475,28.1301,5</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

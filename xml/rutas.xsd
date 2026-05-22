@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Elemento Raíz -->
+  <xs:element name="rutas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ruta" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Elemento Ruta -->
+  <xs:element name="ruta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="tipo" type="xs:string"/>
+        <xs:element name="medio" type="xs:string"/>
+        <xs:element name="fecha_inicio" type="xs:date" minOccurs="0"/>
+        <xs:element name="hora_inicio" type="xs:time" minOccurs="0"/>
+        <xs:element name="duracion" type="xs:string"/>
+        <xs:element name="agencia" type="xs:string"/>
+        <xs:element name="descripcion" type="xs:string"/>
+        <xs:element name="personas_adecuadas" type="xs:string"/>
+        <xs:element name="lugar_inicio" type="xs:string"/>
+        <xs:element name="direccion_inicio" type="xs:string"/>
+        <xs:element name="coordenadas_inicio" type="tipoCoordenadas"/>
+        <xs:element name="referencias" type="tipoReferencias"/>
+        <xs:element name="recomendacion" type="tipoRecomendacion"/>
+        <xs:element name="hitos" type="tipoHitos"/>
+        <xs:element name="planimetria" type="xs:string"/>
+        <xs:element name="altimetria" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipos Complejos -->
+  <xs:complexType name="tipoCoordenadas">
+    <xs:sequence>
+      <xs:element name="longitud" type="xs:decimal"/>
+      <xs:element name="latitud" type="xs:decimal"/>
+      <xs:element name="altitud" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoReferencias">
+    <xs:sequence>
+      <xs:element name="referencia" type="xs:anyURI" minOccurs="3" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoRecomendacion">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoHitos">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="punto" type="tipoPunto"/>
+      <xs:element name="hito" type="tipoHito"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="tipoPunto">
+    <xs:sequence>
+      <xs:element name="coordenadas" type="tipoCoordenadas"/>
+      <xs:element name="distancia" type="tipoDistancia"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoHito">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="descripcion" type="xs:string"/>
+      <xs:element name="coordenadas" type="tipoCoordenadas"/>
+      <xs:element name="distancia" type="tipoDistancia"/>
+      <xs:element name="fotos" type="tipoFotos"/>
+      <xs:element name="videos" type="tipoVideos" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoDistancia">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="unidades" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="tipoFotos">
+    <xs:sequence>
+      <xs:element name="foto" type="xs:string" minOccurs="1" maxOccurs="5"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoVideos">
+    <xs:sequence>
+      <xs:element name="video" type="xs:string" minOccurs="1" maxOccurs="3"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

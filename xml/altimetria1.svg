@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="550" viewBox="0 0 950 550">
+  <!-- Estilos CSS internos -->
+  <style>
+    .titulo { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #111111; }
+    .eje-titulo { font-family: sans-serif; font-size: 12px; font-weight: bold; fill: #333333; }
+    .perfil-linea { fill: url(#gradiente-terreno); stroke: #0055ff; stroke-width: 3; }
+  </style>
+
+  <!-- Gradiente para el relleno de la altimetría -->
+  <defs>
+    <linearGradient id="gradiente-terreno" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0055ff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0055ff" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="100%" height="100%" fill="#fafafa"/>
+
+  <!-- Título de la ruta -->
+  <text x="90" y="35" class="titulo">Ruta de la Degollada de la Goleta al Roque Nublo</text>
+
+  <!-- Cuadrícula y Escalas -->
+  <line x1="90" y1="400.00" x2="890" y2="400.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="404.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1517 m</text>
+  <line x1="90" y1="332.00" x2="890" y2="332.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="336.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1570 m</text>
+  <line x1="90" y1="264.00" x2="890" y2="264.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="268.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1623 m</text>
+  <line x1="90" y1="196.00" x2="890" y2="196.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="200.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1676 m</text>
+  <line x1="90" y1="128.00" x2="890" y2="128.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="132.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1729 m</text>
+  <line x1="90" y1="60.00" x2="890" y2="60.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="80" y="64.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1781 m</text>
+  <line x1="90.00" y1="60" x2="90.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="90.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.00 km</text>
+  <line x1="250.00" y1="60" x2="250.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="250.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.37 km</text>
+  <line x1="410.00" y1="60" x2="410.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="410.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.74 km</text>
+  <line x1="570.00" y1="60" x2="570.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="570.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.11 km</text>
+  <line x1="730.00" y1="60" x2="730.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="730.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.48 km</text>
+  <line x1="890.00" y1="60" x2="890.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="890.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.85 km</text>
+
+  <!-- Ejes -->
+  <line x1="90" y1="60" x2="90" y2="400" stroke="#333333" stroke-width="2"/>
+  <line x1="90" y1="400" x2="890" y2="400" stroke="#333333" stroke-width="2"/>
+
+  <!-- Título de Ejes -->
+  <text x="40" y="45" class="eje-titulo" transform="rotate(-90, 40, 45)" text-anchor="middle">Altitud (metros)</text>
+  <text x="490.0" y="445" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+
+  <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
+  <polygon points="90,400 90.00,293.51 94.92,293.94 99.78,295.48 106.01,304.22 111.90,306.73 118.30,308.45 139.19,315.82 155.64,314.72 177.39,319.62 193.59,325.41 214.39,330.03 225.37,338.05 233.85,340.26 239.24,347.70 246.35,351.89 264.74,354.94 269.65,360.77 281.64,353.36 290.58,351.61 296.24,346.15 301.59,339.69 308.39,340.35 321.90,326.39 330.29,324.17 347.47,320.61 368.20,317.45 392.97,314.37 418.10,305.86 443.87,301.12 505.44,291.11 538.57,276.19 575.91,262.23 598.51,240.68 629.78,224.80 646.15,212.81 662.24,195.76 690.35,188.00 716.84,171.25 730.26,154.77 741.72,155.27 766.71,152.09 787.09,153.29 812.51,128.07 855.52,111.16 879.33,99.23 890.00,111.78 890.00,400 90,400" class="perfil-linea" />
+
+  <!-- Hitos, Marcadores y Etiquetas -->
+  <circle cx="90.00" cy="293.51" r="3" fill="#0055ff"/>
+  <circle cx="94.92" cy="293.94" r="3" fill="#0055ff"/>
+  <circle cx="99.78" cy="295.48" r="3" fill="#0055ff"/>
+  <circle cx="106.01" cy="304.22" r="3" fill="#0055ff"/>
+  <circle cx="111.90" cy="306.73" r="3" fill="#0055ff"/>
+  <circle cx="118.30" cy="308.45" r="3" fill="#0055ff"/>
+  <circle cx="139.19" cy="315.82" r="3" fill="#0055ff"/>
+  <circle cx="155.64" cy="314.72" r="3" fill="#0055ff"/>
+  <circle cx="177.39" cy="319.62" r="3" fill="#0055ff"/>
+  <circle cx="193.59" cy="325.41" r="3" fill="#0055ff"/>
+  <circle cx="214.39" cy="330.03" r="3" fill="#0055ff"/>
+  <circle cx="225.37" cy="338.05" r="3" fill="#0055ff"/>
+  <circle cx="233.85" cy="340.26" r="3" fill="#0055ff"/>
+  <circle cx="239.24" cy="347.70" r="3" fill="#0055ff"/>
+  <circle cx="246.35" cy="351.89" r="3" fill="#0055ff"/>
+  <circle cx="264.74" cy="354.94" r="3" fill="#0055ff"/>
+  <circle cx="269.65" cy="360.77" r="3" fill="#0055ff"/>
+  <circle cx="281.64" cy="353.36" r="3" fill="#0055ff"/>
+  <circle cx="290.58" cy="351.61" r="3" fill="#0055ff"/>
+  <circle cx="296.24" cy="346.15" r="3" fill="#0055ff"/>
+  <circle cx="301.59" cy="339.69" r="3" fill="#0055ff"/>
+  <circle cx="308.39" cy="340.35" r="3" fill="#0055ff"/>
+  <circle cx="321.90" cy="326.39" r="3" fill="#0055ff"/>
+  <line x1="321.90" y1="326.39" x2="321.90" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="321.90" cy="326.39" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="321.90" y="435" transform="rotate(-90, 321.90, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Mirador De La Goleta</text>
+  <text x="321.90" y="318.39" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">1574m</text>
+  <circle cx="330.29" cy="324.17" r="3" fill="#0055ff"/>
+  <circle cx="347.47" cy="320.61" r="3" fill="#0055ff"/>
+  <line x1="347.47" y1="320.61" x2="347.47" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="347.47" cy="320.61" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="347.47" y="435" transform="rotate(-90, 347.47, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Reloj De Sol</text>
+  <text x="347.47" y="312.61" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">1579m</text>
+  <circle cx="368.20" cy="317.45" r="3" fill="#0055ff"/>
+  <circle cx="392.97" cy="314.37" r="3" fill="#0055ff"/>
+  <circle cx="418.10" cy="305.86" r="3" fill="#0055ff"/>
+  <circle cx="443.87" cy="301.12" r="3" fill="#0055ff"/>
+  <circle cx="505.44" cy="291.11" r="3" fill="#0055ff"/>
+  <circle cx="538.57" cy="276.19" r="3" fill="#0055ff"/>
+  <circle cx="575.91" cy="262.23" r="3" fill="#0055ff"/>
+  <circle cx="598.51" cy="240.68" r="3" fill="#0055ff"/>
+  <circle cx="629.78" cy="224.80" r="3" fill="#0055ff"/>
+  <line x1="629.78" y1="224.80" x2="629.78" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="629.78" cy="224.80" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="629.78" y="435" transform="rotate(-90, 629.78, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">El Fraile</text>
+  <text x="629.78" y="216.80" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">1653m</text>
+  <circle cx="646.15" cy="212.81" r="3" fill="#0055ff"/>
+  <circle cx="662.24" cy="195.76" r="3" fill="#0055ff"/>
+  <circle cx="690.35" cy="188.00" r="3" fill="#0055ff"/>
+  <line x1="690.35" y1="188.00" x2="690.35" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="690.35" cy="188.00" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="690.35" y="435" transform="rotate(-90, 690.35, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Degollada Del Nublo</text>
+  <text x="690.35" y="180.00" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">1682m</text>
+  <circle cx="716.84" cy="171.25" r="3" fill="#0055ff"/>
+  <circle cx="730.26" cy="154.77" r="3" fill="#0055ff"/>
+  <circle cx="741.72" cy="155.27" r="3" fill="#0055ff"/>
+  <circle cx="766.71" cy="152.09" r="3" fill="#0055ff"/>
+  <circle cx="787.09" cy="153.29" r="3" fill="#0055ff"/>
+  <circle cx="812.51" cy="128.07" r="3" fill="#0055ff"/>
+  <circle cx="855.52" cy="111.16" r="3" fill="#0055ff"/>
+  <circle cx="879.33" cy="99.23" r="3" fill="#0055ff"/>
+  <line x1="879.33" y1="99.23" x2="879.33" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="879.33" cy="99.23" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="879.33" y="435" transform="rotate(-90, 879.33, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Roque Nublo</text>
+  <text x="879.33" y="91.23" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">1751m</text>
+  <circle cx="890.00" cy="111.78" r="3" fill="#0055ff"/>
+</svg>

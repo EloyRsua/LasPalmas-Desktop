@@ -1,0 +1,37 @@
+<!-- DTD para el archivo de rutas turísticas de la provincia de Las Palmas -->
+<!ELEMENT rutas (ruta+)>
+<!ATTLIST rutas
+  xmlns:xsi CDATA #IMPLIED
+  xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+
+<!ELEMENT ruta (nombre, tipo, medio, fecha_inicio?, hora_inicio?, duracion, agencia, descripcion, personas_adecuadas, lugar_inicio, direccion_inicio, coordenadas_inicio, referencias, recomendacion, hitos, planimetria, altimetria)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT medio (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT hora_inicio (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT agencia (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT personas_adecuadas (#PCDATA)>
+<!ELEMENT lugar_inicio (#PCDATA)>
+<!ELEMENT direccion_inicio (#PCDATA)>
+<!ELEMENT coordenadas_inicio (longitud, latitud, altitud)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT latitud (#PCDATA)>
+<!ELEMENT altitud (#PCDATA)>
+<!ELEMENT referencias (referencia, referencia, referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT recomendacion (#PCDATA)>
+<!ELEMENT hitos (punto | hito)+>
+<!ELEMENT hito (nombre, descripcion, coordenadas, distancia, fotos, videos?)>
+<!ELEMENT punto (coordenadas, distancia)>
+<!ELEMENT coordenadas (longitud, latitud, altitud)>
+<!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidades CDATA #REQUIRED>
+<!ELEMENT fotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ELEMENT videos (video+)>
+<!ELEMENT video (#PCDATA)>
+<!ELEMENT planimetria (#PCDATA)>
+<!ELEMENT altimetria (#PCDATA)>

@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rutas.xsd">
+  
+  
+  <ruta>
+    <nombre>Ruta de la Degollada de la Goleta al Roque Nublo</nombre>
+    <tipo>Senderismo</tipo>
+    <medio>A pie</medio>
+    <fecha_inicio>2026-05-22</fecha_inicio>
+    <hora_inicio>10:00:00</hora_inicio>
+    <duracion>2 horas y 30 minutos</duracion>
+    <agencia>Cabildo de Gran Canaria - Medio Ambiente</agencia>
+    <descripcion>Ascenso a uno de los monumentos naturales más emblemáticos de Canarias, que ofrece espectaculares vistas panorámicas de la caldera de Tejeda y el Teide.</descripcion>
+    <personas_adecuadas>Personas en buena forma física y familias habituadas al senderismo.</personas_adecuadas>
+    <lugar_inicio>Aparcamiento de la Degollada de la Goleta</lugar_inicio>
+    <direccion_inicio>Carretera GC-600, Tejeda, Gran Canaria</direccion_inicio>
+    <coordenadas_inicio>
+      <longitud>-15.59776360008336</longitud>
+      <latitud>27.96617844102121</latitud>
+      <altitud>1600.43</altitud>
+    </coordenadas_inicio>
+    <referencias>
+      <referencia>https://www.grancanaria.com/turismo/es/la-isla/municipios-de-gran-canaria/tejeda/roque-nublo/</referencia>
+      <referencia>https://es.wikipedia.org/wiki/Roque_Nublo</referencia>
+      <referencia>https://www.visor.grafcan.es/</referencia>
+    </referencias>
+    <recomendacion>9.5</recomendacion>
+    <hitos>
+      <punto>
+        <coordenadas>
+          <longitud>-15.59776360008336</longitud>
+          <latitud>27.96617844102121</latitud>
+          <altitud>1600.44</altitud>
+        </coordenadas>
+        <distancia unidades="metros">0.00</distancia>
+      </punto>
+      <punto><coordenadas>
+          <longitud>-15.59777462079623</longitud>
+          <latitud>27.96628020287913</latitud>
+          <altitud>1600.11</altitud>
+        </coordenadas>
+        <distancia unidades="metros">11.37</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59781235248382</longitud>
+          <latitud>27.96637544087702</latitud>
+          <altitud>1598.91</altitud>
+        </coordenadas>
+        <distancia unidades="metros">11.22</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59795870718128</longitud>
+          <latitud>27.9663697024504</latitud>
+          <altitud>1592.12</altitud>
+        </coordenadas>
+        <distancia unidades="metros">14.39</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59804023790524</longitud>
+          <latitud>27.96627074336959</latitud>
+          <altitud>1590.17</altitud>
+        </coordenadas>
+        <distancia unidades="metros">13.61</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59813086347464</longitud>
+          <latitud>27.96616476288573</latitud>
+          <altitud>1588.83</altitud>
+        </coordenadas>
+        <distancia unidades="metros">14.77</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59856674331132</longitud>
+          <latitud>27.96596445815705</latitud>
+          <altitud>1583.10</altitud>
+        </coordenadas>
+        <distancia unidades="metros">48.26</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59888602379716</longitud>
+          <latitud>27.96577161115442</latitud>
+          <altitud>1583.96</altitud>
+        </coordenadas>
+        <distancia unidades="metros">37.99</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.5993691751472</longitud>
+          <latitud>27.9656231524176</latitud>
+          <altitud>1580.15</altitud>
+        </coordenadas>
+        <distancia unidades="metros">50.24</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.59972026765567</longitud>
+          <latitud>27.96549207481867</latitud>
+          <altitud>1575.65</altitud>
+        </coordenadas>
+        <distancia unidades="metros">37.43</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60014729588635</longitud>
+          <latitud>27.96570302916203</latitud>
+          <altitud>1572.06</altitud>
+        </coordenadas>
+        <distancia unidades="metros">48.05</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60019672063096</longitud>
+          <latitud>27.96592676713246</latitud>
+          <altitud>1565.83</altitud>
+        </coordenadas>
+        <distancia unidades="metros">25.35</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60036093153622</longitud>
+          <latitud>27.96602697352731</latitud>
+          <altitud>1564.11</altitud>
+        </coordenadas>
+        <distancia unidades="metros">19.60</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60043226861092</longitud>
+          <latitud>27.96611928905</latitud>
+          <altitud>1558.33</altitud>
+        </coordenadas>
+        <distancia unidades="metros">12.43</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60053208452898</longitud>
+          <latitud>27.96623789847159</latitud>
+          <altitud>1555.07</altitud>
+        </coordenadas>
+        <distancia unidades="metros">16.43</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60093742084911</longitud>
+          <latitud>27.96637143694975</latitud>
+          <altitud>1552.70</altitud>
+        </coordenadas>
+        <distancia unidades="metros">42.49</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60103593556185</longitud>
+          <latitud>27.96642458402732</latitud>
+          <altitud>1548.17</altitud>
+        </coordenadas>
+        <distancia unidades="metros">11.34</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.6012846532775</longitud>
+          <latitud>27.96630750632757</latitud>
+          <altitud>1553.93</altitud>
+        </coordenadas>
+        <distancia unidades="metros">27.68</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60149357495062</longitud>
+          <latitud>27.96628570327609</latitud>
+          <altitud>1555.29</altitud>
+        </coordenadas>
+        <distancia unidades="metros">20.66</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60147492870928</longitud>
+          <latitud>27.96616937106124</latitud>
+          <altitud>1559.53</altitud>
+        </coordenadas>
+        <distancia unidades="metros">13.06</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60143604113933</longitud>
+          <latitud>27.96606365900357</latitud>
+          <altitud>1564.55</altitud>
+        </coordenadas>
+        <distancia unidades="metros">12.36</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60157917806122</longitud>
+          <latitud>27.96612666497044</latitud>
+          <altitud>1564.04</altitud>
+        </coordenadas>
+        <distancia unidades="metros">15.71</distancia>
+        </punto><hito>
+        <nombre>Mirador De La Goleta</nombre>
+        <descripcion>Hito de interés turístico: Mirador De La Goleta.</descripcion>
+        <coordenadas>
+          <longitud>-15.60158731464052</longitud>
+          <latitud>27.96584610257849</latitud>
+          <altitud>1574.89</altitud>
+        </coordenadas>
+        <distancia unidades="metros">31.21</distancia>
+        <fotos>
+          <foto>multimedia/miradorGoleta.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-15.60178382518767</longitud>
+          <latitud>27.96582887350609</latitud>
+          <altitud>1576.61</altitud>
+        </coordenadas>
+        <distancia unidades="metros">19.39</distancia>
+        </punto><hito>
+        <nombre>Reloj De Sol</nombre>
+        <descripcion>Hito de interés turístico: Reloj De Sol.</descripcion>
+        <coordenadas>
+          <longitud>-15.60216356446526</longitud>
+          <latitud>27.9659506142819</latitud>
+          <altitud>1579.38</altitud>
+        </coordenadas>
+        <distancia unidades="metros">39.68</distancia>
+        <fotos>
+          <foto>multimedia/relojSol.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-15.60258556321784</longitud>
+          <latitud>27.96616623616898</latitud>
+          <altitud>1581.84</altitud>
+        </coordenadas>
+        <distancia unidades="metros">47.88</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.6029689431855</longitud>
+          <latitud>27.96655373578121</latitud>
+          <altitud>1584.23</altitud>
+        </coordenadas>
+        <distancia unidades="metros">57.22</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60340622077941</longitud>
+          <latitud>27.96690485412501</latitud>
+          <altitud>1590.84</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.04</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60400490178918</longitud>
+          <latitud>27.96698786701954</latitud>
+          <altitud>1594.53</altitud>
+        </coordenadas>
+        <distancia unidades="metros">59.52</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.6052924669267</longitud>
+          <latitud>27.96757351630565</latitud>
+          <altitud>1602.31</altitud>
+        </coordenadas>
+        <distancia unidades="metros">142.23</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60593408897464</longitud>
+          <latitud>27.96796388286946</latitud>
+          <altitud>1613.90</altitud>
+        </coordenadas>
+        <distancia unidades="metros">76.52</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60671362640698</longitud>
+          <latitud>27.96832095655471</latitud>
+          <altitud>1624.75</altitud>
+        </coordenadas>
+        <distancia unidades="metros">86.24</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60722781456911</longitud>
+          <latitud>27.96820191325194</latitud>
+          <altitud>1641.50</altitud>
+        </coordenadas>
+        <distancia unidades="metros">52.20</distancia>
+        </punto><hito>
+        <nombre>El Fraile</nombre>
+        <descripcion>Hito de interés turístico: El Fraile.</descripcion>
+        <coordenadas>
+          <longitud>-15.60791540280212</longitud>
+          <latitud>27.96843264387431</latitud>
+          <altitud>1653.84</altitud>
+        </coordenadas>
+        <distancia unidades="metros">72.24</distancia>
+        <fotos>
+          <foto>multimedia/fraile.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-15.60829150970955</longitud>
+          <latitud>27.9683600893031</latitud>
+          <altitud>1663.16</altitud>
+        </coordenadas>
+        <distancia unidades="metros">37.81</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.60856284497026</longitud>
+          <latitud>27.96812714414935</latitud>
+          <altitud>1676.41</altitud>
+        </coordenadas>
+        <distancia unidades="metros">37.16</distancia>
+        </punto><hito>
+        <nombre>Degollada Del Nublo</nombre>
+        <descripcion>Hito de interés turístico: Degollada Del Nublo.</descripcion>
+        <coordenadas>
+          <longitud>-15.60921833490027</longitud>
+          <latitud>27.96820350530342</latitud>
+          <altitud>1682.44</altitud>
+        </coordenadas>
+        <distancia unidades="metros">64.93</distancia>
+        <fotos>
+          <foto>multimedia/degollada.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-15.60983431642867</longitud>
+          <latitud>27.96812051918002</latitud>
+          <altitud>1695.46</altitud>
+        </coordenadas>
+        <distancia unidades="metros">61.19</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.61009727909722</longitud>
+          <latitud>27.9679662500038</latitud>
+          <altitud>1708.27</altitud>
+        </coordenadas>
+        <distancia unidades="metros">31.00</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.61032434387372</longitud>
+          <latitud>27.9680944987287</latitud>
+          <altitud>1707.88</altitud>
+        </coordenadas>
+        <distancia unidades="metros">26.47</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.61079595781305</longitud>
+          <latitud>27.96840443610706</latitud>
+          <altitud>1710.35</altitud>
+        </coordenadas>
+        <distancia unidades="metros">57.73</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.6112234372736</longitud>
+          <latitud>27.96859579086356</latitud>
+          <altitud>1709.42</altitud>
+        </coordenadas>
+        <distancia unidades="metros">47.07</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.61169934403798</longitud>
+          <latitud>27.9689155260207</latitud>
+          <altitud>1729.02</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.72</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-15.6121907919593</longitud>
+          <latitud>27.96969624218459</latitud>
+          <altitud>1742.16</altitud>
+        </coordenadas>
+        <distancia unidades="metros">99.33</distancia>
+        </punto><hito>
+        <nombre>Roque Nublo</nombre>
+        <descripcion>Hito de interés turístico: Roque Nublo.</descripcion>
+        <coordenadas>
+          <longitud>-15.61240782394579</longitud>
+          <latitud>27.97015232894596</latitud>
+          <altitud>1751.43</altitud>
+        </coordenadas>
+        <distancia unidades="metros">55.01</distancia>
+        <fotos>
+          <foto>multimedia/roqueNublo.png</foto></fotos>
+      </hito>
+      <punto>
+        <coordenadas>
+          <longitud>-15.61237390435864</longitud>
+          <latitud>27.97037186858851</latitud>
+          <altitud>1741.68</altitud>
+        </coordenadas>
+        <distancia unidades="metros">24.64</distancia>
+      </punto>
+</hitos><planimetria>planimetria1.kml</planimetria>
+    <altimetria>altimetria1.svg</altimetria>
+  </ruta>
+
+    
+  <ruta>
+    <nombre>Ruta de los Volcanes en Timanfaya</nombre>
+    <tipo>Paisajística</tipo>
+    <medio>Autobús</medio>
+    <fecha_inicio>2026-05-22</fecha_inicio>
+    <hora_inicio>09:30:00</hora_inicio>
+    <duracion>45 minutos</duracion>
+    <agencia>Centros de Arte, Cultura y Turismo (CACT) de Lanzarote</agencia>
+    <descripcion>Recorrido en autobús por el interior del Parque Nacional de Timanfaya, contemplando campos de lava, cráteres y el espectacular paisaje volcánico de las Montañas del Fuego.</descripcion>
+    <personas_adecuadas>Todo tipo de público (apto para personas con movilidad reducida ya que no se baja del autobús).</personas_adecuadas>
+    <lugar_inicio>Islote de Hilario</lugar_inicio>
+    <direccion_inicio>Parque Nacional de Timanfaya, GC-602, Tinajo, Lanzarote</direccion_inicio>
+    <coordenadas_inicio>
+      <longitud>-13.75301831979987</longitud>
+      <latitud>29.00578893974032</latitud>
+      <altitud>355.20</altitud>
+    </coordenadas_inicio>
+    <referencias>
+      <referencia>https://www.cactlanzarote.com/es/cact/timanfaya/</referencia>
+      <referencia>https://es.wikipedia.org/wiki/Parque_nacional_de_Timanfaya</referencia>
+      <referencia>https://www.lanzarote.com/es/timanfaya/</referencia>
+    </referencias>
+    <recomendacion>9.8</recomendacion>
+    <hitos>
+      <punto>
+        <coordenadas>
+          <longitud>-13.75301831979987</longitud>
+          <latitud>29.00578893974032</latitud>
+          <altitud>355.20</altitud>
+        </coordenadas>
+        <distancia unidades="metros">0.00</distancia>
+      </punto>
+      <punto><coordenadas>
+          <longitud>-13.75448670728937</longitud>
+          <latitud>29.00639680489864</latitud>
+          <altitud>331.67</altitud>
+        </coordenadas>
+        <distancia unidades="metros">157.99</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75497297442861</longitud>
+          <latitud>29.00670310019331</latitud>
+          <altitud>329.20</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.28</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75506103023498</longitud>
+          <latitud>29.00630399426108</latitud>
+          <altitud>329.07</altitud>
+        </coordenadas>
+        <distancia unidades="metros">45.20</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75483738645882</longitud>
+          <latitud>29.0061901796534</latitud>
+          <altitud>326.16</altitud>
+        </coordenadas>
+        <distancia unidades="metros">25.16</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75472090920153</longitud>
+          <latitud>29.00600471446788</latitud>
+          <altitud>325.15</altitud>
+        </coordenadas>
+        <distancia unidades="metros">23.53</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75504031733903</longitud>
+          <latitud>29.00592020707881</latitud>
+          <altitud>318.45</altitud>
+        </coordenadas>
+        <distancia unidades="metros">32.45</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75535470307696</longitud>
+          <latitud>29.00599872298957</latitud>
+          <altitud>313.68</altitud>
+        </coordenadas>
+        <distancia unidades="metros">31.80</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75568015969722</longitud>
+          <latitud>29.00615225292723</latitud>
+          <altitud>307.18</altitud>
+        </coordenadas>
+        <distancia unidades="metros">35.96</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75599639734929</longitud>
+          <latitud>29.00632284537673</latitud>
+          <altitud>305.81</altitud>
+        </coordenadas>
+        <distancia unidades="metros">36.13</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7562906914684</longitud>
+          <latitud>29.00669386434316</latitud>
+          <altitud>304.01</altitud>
+        </coordenadas>
+        <distancia unidades="metros">50.21</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75704432212099</longitud>
+          <latitud>29.00706456017997</latitud>
+          <altitud>307.98</altitud>
+        </coordenadas>
+        <distancia unidades="metros">84.08</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75736059640052</longitud>
+          <latitud>29.00774324974508</latitud>
+          <altitud>310.68</altitud>
+        </coordenadas>
+        <distancia unidades="metros">81.49</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7578189729594</longitud>
+          <latitud>29.00827116349966</latitud>
+          <altitud>307.13</altitud>
+        </coordenadas>
+        <distancia unidades="metros">73.71</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75829205616525</longitud>
+          <latitud>29.0084694157322</latitud>
+          <altitud>304.58</altitud>
+        </coordenadas>
+        <distancia unidades="metros">51.01</distancia>
+        </punto><hito>
+        <nombre>El Manto De La Virgen</nombre>
+        <descripcion>Hito destacado del recorrido: El Manto De La Virgen.</descripcion>
+        <coordenadas>
+          <longitud>-13.75860441284166</longitud>
+          <latitud>29.0089872222838</latitud>
+          <altitud>303.16</altitud>
+        </coordenadas>
+        <distancia unidades="metros">65.10</distancia>
+        <fotos>
+          <foto>multimedia/mantoVirgen.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.76042598958285</longitud>
+          <latitud>29.00853426488062</latitud>
+          <altitud>295.64</altitud>
+        </coordenadas>
+        <distancia unidades="metros">184.16</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76109132418503</longitud>
+          <latitud>29.00796735951537</latitud>
+          <altitud>299.20</altitud>
+        </coordenadas>
+        <distancia unidades="metros">90.33</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76101387202576</longitud>
+          <latitud>29.00741220142877</latitud>
+          <altitud>302.71</altitud>
+        </coordenadas>
+        <distancia unidades="metros">62.19</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76151655962381</longitud>
+          <latitud>29.00719132032935</latitud>
+          <altitud>302.41</altitud>
+        </coordenadas>
+        <distancia unidades="metros">54.71</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7624250784366</longitud>
+          <latitud>29.00671265756529</latitud>
+          <altitud>297.48</altitud>
+        </coordenadas>
+        <distancia unidades="metros">103.14</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76345269849063</longitud>
+          <latitud>29.00587395565478</latitud>
+          <altitud>287.36</altitud>
+        </coordenadas>
+        <distancia unidades="metros">136.69</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7641829245317</longitud>
+          <latitud>29.00480193119657</latitud>
+          <altitud>278.40</altitud>
+        </coordenadas>
+        <distancia unidades="metros">138.75</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76489438645136</longitud>
+          <latitud>29.00394153375697</latitud>
+          <altitud>275.36</altitud>
+        </coordenadas>
+        <distancia unidades="metros">118.07</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76621102861341</longitud>
+          <latitud>29.00371924475773</latitud>
+          <altitud>270.38</altitud>
+        </coordenadas>
+        <distancia unidades="metros">130.41</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76708622704112</longitud>
+          <latitud>29.0037799046891</latitud>
+          <altitud>265.99</altitud>
+        </coordenadas>
+        <distancia unidades="metros">85.38</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76769535528633</longitud>
+          <latitud>29.00334280795059</latitud>
+          <altitud>262.32</altitud>
+        </coordenadas>
+        <distancia unidades="metros">76.62</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76840590417854</longitud>
+          <latitud>29.00305488292817</latitud>
+          <altitud>260.03</altitud>
+        </coordenadas>
+        <distancia unidades="metros">76.16</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76864669594011</longitud>
+          <latitud>29.0028507706729</latitud>
+          <altitud>262.40</altitud>
+        </coordenadas>
+        <distancia unidades="metros">32.61</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7684726318033</longitud>
+          <latitud>29.00259024239294</latitud>
+          <altitud>264.38</altitud>
+        </coordenadas>
+        <distancia unidades="metros">33.55</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76824634395101</longitud>
+          <latitud>29.00237525949543</latitud>
+          <altitud>265.68</altitud>
+        </coordenadas>
+        <distancia unidades="metros">32.49</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76832800427449</longitud>
+          <latitud>29.00183808149881</latitud>
+          <altitud>265.71</altitud>
+        </coordenadas>
+        <distancia unidades="metros">60.26</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76903565450811</longitud>
+          <latitud>29.00163523690365</latitud>
+          <altitud>260.35</altitud>
+        </coordenadas>
+        <distancia unidades="metros">72.42</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76928932939256</longitud>
+          <latitud>29.00154226388172</latitud>
+          <altitud>258.38</altitud>
+        </coordenadas>
+        <distancia unidades="metros">26.75</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76952942785967</longitud>
+          <latitud>29.00135503215909</latitud>
+          <altitud>256.99</altitud>
+        </coordenadas>
+        <distancia unidades="metros">31.28</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77027377158757</longitud>
+          <latitud>29.00122580295886</latitud>
+          <altitud>256.06</altitud>
+        </coordenadas>
+        <distancia unidades="metros">73.80</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77073040572662</longitud>
+          <latitud>29.00133222811764</latitud>
+          <altitud>254.12</altitud>
+        </coordenadas>
+        <distancia unidades="metros">45.96</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77082252737057</longitud>
+          <latitud>29.00103188248109</latitud>
+          <altitud>252.02</altitud>
+        </coordenadas>
+        <distancia unidades="metros">34.58</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77061120361735</longitud>
+          <latitud>29.00069907640185</latitud>
+          <altitud>251.35</altitud>
+        </coordenadas>
+        <distancia unidades="metros">42.33</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77034871969786</longitud>
+          <latitud>29.00066278183659</latitud>
+          <altitud>250.73</altitud>
+        </coordenadas>
+        <distancia unidades="metros">25.84</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.77013969341285</longitud>
+          <latitud>28.99950811624662</latitud>
+          <altitud>259.69</altitud>
+        </coordenadas>
+        <distancia unidades="metros">129.99</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76965695798007</longitud>
+          <latitud>28.99919366344361</latitud>
+          <altitud>263.43</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.54</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7693757052698</longitud>
+          <latitud>28.99890627298461</latitud>
+          <altitud>263.25</altitud>
+        </coordenadas>
+        <distancia unidades="metros">42.06</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.769387847269</longitud>
+          <latitud>28.99835588801755</latitud>
+          <altitud>266.96</altitud>
+        </coordenadas>
+        <distancia unidades="metros">61.21</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76948513142996</longitud>
+          <latitud>28.99823257192957</latitud>
+          <altitud>267.43</altitud>
+        </coordenadas>
+        <distancia unidades="metros">16.66</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76946385178911</longitud>
+          <latitud>28.99805608545666</latitud>
+          <altitud>269.06</altitud>
+        </coordenadas>
+        <distancia unidades="metros">19.73</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76959173358217</longitud>
+          <latitud>28.99791798074602</latitud>
+          <altitud>270.41</altitud>
+        </coordenadas>
+        <distancia unidades="metros">19.76</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76983554964485</longitud>
+          <latitud>28.99750870142382</latitud>
+          <altitud>275.51</altitud>
+        </coordenadas>
+        <distancia unidades="metros">51.32</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76917146110903</longitud>
+          <latitud>28.99685653780137</latitud>
+          <altitud>275.85</altitud>
+        </coordenadas>
+        <distancia unidades="metros">97.11</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76897778729048</longitud>
+          <latitud>28.99641788614796</latitud>
+          <altitud>276.46</altitud>
+        </coordenadas>
+        <distancia unidades="metros">52.29</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76835512163793</longitud>
+          <latitud>28.99612396605711</latitud>
+          <altitud>275.75</altitud>
+        </coordenadas>
+        <distancia unidades="metros">68.81</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76785078867379</longitud>
+          <latitud>28.99588835759564</latitud>
+          <altitud>275.03</altitud>
+        </coordenadas>
+        <distancia unidades="metros">55.61</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76737875101304</longitud>
+          <latitud>28.99582085335733</latitud>
+          <altitud>280.57</altitud>
+        </coordenadas>
+        <distancia unidades="metros">46.52</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76714466573901</longitud>
+          <latitud>28.9961771694397</latitud>
+          <altitud>283.48</altitud>
+        </coordenadas>
+        <distancia unidades="metros">45.70</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76676236822292</longitud>
+          <latitud>28.99629483449209</latitud>
+          <altitud>289.27</altitud>
+        </coordenadas>
+        <distancia unidades="metros">39.42</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76660737889378</longitud>
+          <latitud>28.99652893904564</latitud>
+          <altitud>288.38</altitud>
+        </coordenadas>
+        <distancia unidades="metros">30.08</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76630014676039</longitud>
+          <latitud>28.99646559097803</latitud>
+          <altitud>287.62</altitud>
+        </coordenadas>
+        <distancia unidades="metros">30.70</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76622780959612</longitud>
+          <latitud>28.99613912835152</latitud>
+          <altitud>285.44</altitud>
+        </coordenadas>
+        <distancia unidades="metros">36.98</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76587815792726</longitud>
+          <latitud>28.9960130180338</latitud>
+          <altitud>283.44</altitud>
+        </coordenadas>
+        <distancia unidades="metros">36.78</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76528672554281</longitud>
+          <latitud>28.99517279058755</latitud>
+          <altitud>273.32</altitud>
+        </coordenadas>
+        <distancia unidades="metros">109.72</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7641789242476</longitud>
+          <latitud>28.99451793334849</latitud>
+          <altitud>265.55</altitud>
+        </coordenadas>
+        <distancia unidades="metros">130.04</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.763507293551</longitud>
+          <latitud>28.99449683000903</latitud>
+          <altitud>267.36</altitud>
+        </coordenadas>
+        <distancia unidades="metros">65.36</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76276385675112</longitud>
+          <latitud>28.99477594640887</latitud>
+          <altitud>272.37</altitud>
+        </coordenadas>
+        <distancia unidades="metros">78.68</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76219764239231</longitud>
+          <latitud>28.99494290651285</latitud>
+          <altitud>274.96</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.11</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76179718764452</longitud>
+          <latitud>28.99474185032836</latitud>
+          <altitud>276.66</altitud>
+        </coordenadas>
+        <distancia unidades="metros">44.91</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76161346034779</longitud>
+          <latitud>28.99474478934249</latitud>
+          <altitud>277.11</altitud>
+        </coordenadas>
+        <distancia unidades="metros">17.87</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76132147595631</longitud>
+          <latitud>28.99459882057015</latitud>
+          <altitud>276.66</altitud>
+        </coordenadas>
+        <distancia unidades="metros">32.71</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76105680609719</longitud>
+          <latitud>28.99433467415694</latitud>
+          <altitud>277.76</altitud>
+        </coordenadas>
+        <distancia unidades="metros">39.06</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76070771479801</longitud>
+          <latitud>28.99445111354646</latitud>
+          <altitud>281.53</altitud>
+        </coordenadas>
+        <distancia unidades="metros">36.34</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76044127894656</longitud>
+          <latitud>28.99505565446658</latitud>
+          <altitud>291.23</altitud>
+        </coordenadas>
+        <distancia unidades="metros">72.04</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76014081989178</longitud>
+          <latitud>28.99533236058385</latitud>
+          <altitud>298.61</altitud>
+        </coordenadas>
+        <distancia unidades="metros">42.43</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.76005515451425</longitud>
+          <latitud>28.99578333398015</latitud>
+          <altitud>302.02</altitud>
+        </coordenadas>
+        <distancia unidades="metros">50.83</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75970991029928</longitud>
+          <latitud>28.99580441603364</latitud>
+          <altitud>303.01</altitud>
+        </coordenadas>
+        <distancia unidades="metros">33.66</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75968363590994</longitud>
+          <latitud>28.99631975600069</latitud>
+          <altitud>310.30</altitud>
+        </coordenadas>
+        <distancia unidades="metros">57.36</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75948925643292</longitud>
+          <latitud>28.99675554577192</latitud>
+          <altitud>315.52</altitud>
+        </coordenadas>
+        <distancia unidades="metros">52.01</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75998752859446</longitud>
+          <latitud>28.99726627725584</latitud>
+          <altitud>326.83</altitud>
+        </coordenadas>
+        <distancia unidades="metros">74.66</distancia>
+        </punto><hito>
+        <nombre>La Caldera Quemada</nombre>
+        <descripcion>Hito destacado del recorrido: La Caldera Quemada.</descripcion>
+        <coordenadas>
+          <longitud>-13.75997352980189</longitud>
+          <latitud>28.99770232518943</latitud>
+          <altitud>329.40</altitud>
+        </coordenadas>
+        <distancia unidades="metros">48.51</distancia>
+        <fotos>
+          <foto>multimedia/calderaQuemada.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.75977031931992</longitud>
+          <latitud>28.99774267100231</latitud>
+          <altitud>329.26</altitud>
+        </coordenadas>
+        <distancia unidades="metros">20.27</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75956724425889</longitud>
+          <latitud>28.99743160704593</latitud>
+          <altitud>324.14</altitud>
+        </coordenadas>
+        <distancia unidades="metros">39.83</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75924160206663</longitud>
+          <latitud>28.99735844190381</latitud>
+          <altitud>321.23</altitud>
+        </coordenadas>
+        <distancia unidades="metros">32.70</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75875927225787</longitud>
+          <latitud>28.99703335010424</latitud>
+          <altitud>316.93</altitud>
+        </coordenadas>
+        <distancia unidades="metros">59.22</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75846383038937</longitud>
+          <latitud>28.9966983704084</latitud>
+          <altitud>313.91</altitud>
+        </coordenadas>
+        <distancia unidades="metros">47.04</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7580680706688</longitud>
+          <latitud>28.99657920596321</latitud>
+          <altitud>313.51</altitud>
+        </coordenadas>
+        <distancia unidades="metros">40.71</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75798700737959</longitud>
+          <latitud>28.99646546307905</latitud>
+          <altitud>313.63</altitud>
+        </coordenadas>
+        <distancia unidades="metros">14.90</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75806069064339</longitud>
+          <latitud>28.99616990444879</latitud>
+          <altitud>310.54</altitud>
+        </coordenadas>
+        <distancia unidades="metros">33.64</distancia>
+        </punto><hito>
+        <nombre>Carretera Excavada En Lava</nombre>
+        <descripcion>Hito destacado del recorrido: Carretera Excavada En Lava.</descripcion>
+        <coordenadas>
+          <longitud>-13.75830023044715</longitud>
+          <latitud>28.99606206587496</latitud>
+          <altitud>307.91</altitud>
+        </coordenadas>
+        <distancia unidades="metros">26.20</distancia>
+        <fotos>
+          <foto>multimedia/carreteraEnLava.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.7584058928383</longitud>
+          <latitud>28.99592754385835</latitud>
+          <altitud>305.06</altitud>
+        </coordenadas>
+        <distancia unidades="metros">18.15</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75842380274096</longitud>
+          <latitud>28.99571073566862</latitud>
+          <altitud>300.42</altitud>
+        </coordenadas>
+        <distancia unidades="metros">24.17</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75819151800085</longitud>
+          <latitud>28.99512469557014</latitud>
+          <altitud>296.00</altitud>
+        </coordenadas>
+        <distancia unidades="metros">68.97</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75792780063999</longitud>
+          <latitud>28.99469687057628</latitud>
+          <altitud>297.87</altitud>
+        </coordenadas>
+        <distancia unidades="metros">54.05</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75769181841515</longitud>
+          <latitud>28.99466955698206</latitud>
+          <altitud>296.98</altitud>
+        </coordenadas>
+        <distancia unidades="metros">23.15</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75728515954924</longitud>
+          <latitud>28.99428609101919</latitud>
+          <altitud>293.84</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.16</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75695161832618</longitud>
+          <latitud>28.99400501984104</latitud>
+          <altitud>291.67</altitud>
+        </coordenadas>
+        <distancia unidades="metros">45.05</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75658001590326</longitud>
+          <latitud>28.99420268548937</latitud>
+          <altitud>292.95</altitud>
+        </coordenadas>
+        <distancia unidades="metros">42.30</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.756082489521</longitud>
+          <latitud>28.99432805134411</latitud>
+          <altitud>295.53</altitud>
+        </coordenadas>
+        <distancia unidades="metros">50.36</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75563735495495</longitud>
+          <latitud>28.99512933680995</latitud>
+          <altitud>307.32</altitud>
+        </coordenadas>
+        <distancia unidades="metros">99.06</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75504660217361</longitud>
+          <latitud>28.99557322688636</latitud>
+          <altitud>321.82</altitud>
+        </coordenadas>
+        <distancia unidades="metros">75.75</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75459901316299</longitud>
+          <latitud>28.99584594428251</latitud>
+          <altitud>326.66</altitud>
+        </coordenadas>
+        <distancia unidades="metros">53.05</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75403011440077</longitud>
+          <latitud>28.99579113204058</latitud>
+          <altitud>334.64</altitud>
+        </coordenadas>
+        <distancia unidades="metros">55.66</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75341674169252</longitud>
+          <latitud>28.99567552661814</latitud>
+          <altitud>340.24</altitud>
+        </coordenadas>
+        <distancia unidades="metros">61.02</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75253524662935</longitud>
+          <latitud>28.99526970432571</latitud>
+          <altitud>335.41</altitud>
+        </coordenadas>
+        <distancia unidades="metros">96.88</distancia>
+        </punto><hito>
+        <nombre>Valle De La Tranquilidad</nombre>
+        <descripcion>Hito destacado del recorrido: Valle De La Tranquilidad.</descripcion>
+        <coordenadas>
+          <longitud>-13.75245947427176</longitud>
+          <latitud>28.99495277272059</latitud>
+          <altitud>333.78</altitud>
+        </coordenadas>
+        <distancia unidades="metros">36.00</distancia>
+        <fotos>
+          <foto>multimedia/valleTranquilidad.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.75270127282569</longitud>
+          <latitud>28.99483947607419</latitud>
+          <altitud>334.84</altitud>
+        </coordenadas>
+        <distancia unidades="metros">26.68</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75296279252958</longitud>
+          <latitud>28.99511660360573</latitud>
+          <altitud>337.00</altitud>
+        </coordenadas>
+        <distancia unidades="metros">39.96</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75331417767231</longitud>
+          <latitud>28.9955478602379</latitud>
+          <altitud>339.20</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.89</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75318556110701</longitud>
+          <latitud>28.99616907556376</latitud>
+          <altitud>347.09</altitud>
+        </coordenadas>
+        <distancia unidades="metros">70.20</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75286801059545</longitud>
+          <latitud>28.99671836282603</latitud>
+          <altitud>350.36</altitud>
+        </coordenadas>
+        <distancia unidades="metros">68.44</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75249204609984</longitud>
+          <latitud>28.99690290374222</latitud>
+          <altitud>350.48</altitud>
+        </coordenadas>
+        <distancia unidades="metros">41.93</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75212736305361</longitud>
+          <latitud>28.99724598665512</latitud>
+          <altitud>352.10</altitud>
+        </coordenadas>
+        <distancia unidades="metros">52.09</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75212456889799</longitud>
+          <latitud>28.99752191459501</latitud>
+          <altitud>352.61</altitud>
+        </coordenadas>
+        <distancia unidades="metros">30.68</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75222764416297</longitud>
+          <latitud>28.99776873029895</latitud>
+          <altitud>353.73</altitud>
+        </coordenadas>
+        <distancia unidades="metros">29.22</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75173469040683</longitud>
+          <latitud>28.99806239727889</latitud>
+          <altitud>353.52</altitud>
+        </coordenadas>
+        <distancia unidades="metros">58.01</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75068386672138</longitud>
+          <latitud>28.99807146825821</latitud>
+          <altitud>360.70</altitud>
+        </coordenadas>
+        <distancia unidades="metros">102.20</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75001439717699</longitud>
+          <latitud>28.99841418734228</latitud>
+          <altitud>362.22</altitud>
+        </coordenadas>
+        <distancia unidades="metros">75.44</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75010809322011</longitud>
+          <latitud>28.99883084738691</latitud>
+          <altitud>356.31</altitud>
+        </coordenadas>
+        <distancia unidades="metros">47.22</distancia>
+        </punto><hito>
+        <nombre>Echadero de los Camellos</nombre>
+        <descripcion>Hito destacado del recorrido: Echadero de los Camellos.</descripcion>
+        <coordenadas>
+          <longitud>-13.75066416226046</longitud>
+          <latitud>28.99937704141959</latitud>
+          <altitud>354.20</altitud>
+        </coordenadas>
+        <distancia unidades="metros">81.32</distancia>
+        <fotos>
+          <foto>multimedia/echaderoCamellos.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.7507515798809</longitud>
+          <latitud>29.00015857117753</latitud>
+          <altitud>360.17</altitud>
+        </coordenadas>
+        <distancia unidades="metros">87.32</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75054068233288</longitud>
+          <latitud>29.00139312344307</latitud>
+          <altitud>369.49</altitud>
+        </coordenadas>
+        <distancia unidades="metros">138.80</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75132178466029</longitud>
+          <latitud>29.00163473495911</latitud>
+          <altitud>357.03</altitud>
+        </coordenadas>
+        <distancia unidades="metros">80.57</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75169751581257</longitud>
+          <latitud>29.00196321981225</latitud>
+          <altitud>350.45</altitud>
+        </coordenadas>
+        <distancia unidades="metros">51.67</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7536357227478</longitud>
+          <latitud>29.00298310518881</latitud>
+          <altitud>328.93</altitud>
+        </coordenadas>
+        <distancia unidades="metros">219.98</distancia>
+        </punto><hito>
+        <nombre>La Caldera De La Boca Del Infierno</nombre>
+        <descripcion>Hito destacado del recorrido: La Caldera De La Boca Del Infierno.</descripcion>
+        <coordenadas>
+          <longitud>-13.7540496080981</longitud>
+          <latitud>29.00362199724909</latitud>
+          <altitud>326.30</altitud>
+        </coordenadas>
+        <distancia unidades="metros">81.65</distancia>
+        <fotos>
+          <foto>multimedia/calderaInfierno.png</foto>
+        </fotos>
+      </hito>
+      <punto><coordenadas>
+          <longitud>-13.75382448250568</longitud>
+          <latitud>29.00440393890569</latitud>
+          <altitud>322.16</altitud>
+        </coordenadas>
+        <distancia unidades="metros">89.66</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75403015842419</longitud>
+          <latitud>29.00511119738512</latitud>
+          <altitud>321.13</altitud>
+        </coordenadas>
+        <distancia unidades="metros">81.15</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75454309645758</longitud>
+          <latitud>29.00552814980044</latitud>
+          <altitud>324.91</altitud>
+        </coordenadas>
+        <distancia unidades="metros">68.10</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75457048446035</longitud>
+          <latitud>29.00607673464172</latitud>
+          <altitud>326.73</altitud>
+        </coordenadas>
+        <distancia unidades="metros">61.06</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.7546866483934</longitud>
+          <latitud>29.00621002056195</latitud>
+          <altitud>324.77</altitud>
+        </coordenadas>
+        <distancia unidades="metros">18.64</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75493406294924</longitud>
+          <latitud>29.00615836021219</latitud>
+          <altitud>325.55</altitud>
+        </coordenadas>
+        <distancia unidades="metros">24.74</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75510970865081</longitud>
+          <latitud>29.00646310939387</latitud>
+          <altitud>331.07</altitud>
+        </coordenadas>
+        <distancia unidades="metros">37.95</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75501581776271</longitud>
+          <latitud>29.00669491410964</latitud>
+          <altitud>328.96</altitud>
+        </coordenadas>
+        <distancia unidades="metros">27.34</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75466312790549</longitud>
+          <latitud>29.00665051556483</latitud>
+          <altitud>327.93</altitud>
+        </coordenadas>
+        <distancia unidades="metros">34.65</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75448670728937</longitud>
+          <latitud>29.00639680489864</latitud>
+          <altitud>331.55</altitud>
+        </coordenadas>
+        <distancia unidades="metros">33.02</distancia>
+        </punto><punto><coordenadas>
+          <longitud>-13.75411311068429</longitud>
+          <latitud>29.00621329074479</latitud>
+          <altitud>336.34</altitud>
+        </coordenadas>
+        <distancia unidades="metros">41.67</distancia>
+        </punto>
+        <punto>
+        <coordenadas>
+          <longitud>-13.75349485057381</longitud>
+          <latitud>29.00629805762981</latitud>
+          <altitud>342.67</altitud>
+        </coordenadas>
+        <distancia unidades="metros">60.86</distancia>
+        </punto></hitos><planimetria>planimetria2.kml</planimetria>
+    <altimetria>altimetria2.svg</altimetria>
+  </ruta>
+
+  
+  <ruta>
+    <nombre>Paseo Marítimo de la Playa de Las Canteras</nombre>
+    <tipo>Gastronómica</tipo>
+    <medio>A pie</medio>
+    <fecha_inicio>2026-05-22</fecha_inicio>
+    <hora_inicio>18:00:00</hora_inicio>
+    <duracion>2 horas</duracion>
+    <agencia>Sin agencia</agencia>
+    <descripcion>Caminata relajante a lo largo de una de las mejores playas urbanas del mundo, con abundantes restaurantes donde probar la cocina marinera canaria.</descripcion>
+    <personas_adecuadas>Apto para todo público.</personas_adecuadas>
+    <lugar_inicio>Plaza de la Puntilla</lugar_inicio>
+    <direccion_inicio>Plaza de la Puntilla, Las Canteras, Las Palmas de Gran Canaria</direccion_inicio>
+    <coordenadas_inicio>
+      <longitud>-15.4265</longitud>
+      <latitud>28.1492</latitud>
+      <altitud>2</altitud>
+    </coordenadas_inicio>
+    <referencias>
+      <referencia>https://www.lpavisit.com/es/que-ver/las-canteras</referencia>
+      <referencia>https://es.wikipedia.org/wiki/Playa_de_Las_Canteras</referencia>
+      <referencia>https://turismolaspalmas.es/</referencia>
+    </referencias>
+    <recomendacion>9.7</recomendacion>
+    <hitos>
+      <hito>
+        <nombre>La Puntilla</nombre>
+        <descripcion>Extremo noreste de la playa donde amarran los barcos pesqueros tradicionales.</descripcion>
+        <coordenadas>
+          <longitud>-15.4271</longitud>
+          <latitud>28.1491</latitud>
+          <altitud>2</altitud>
+        </coordenadas>
+        <distancia unidades="metros">0</distancia>
+        <fotos>
+          <foto>multimedia/canteras_movil.jpg</foto>
+        </fotos>
+      </hito>
+      <hito>
+        <nombre>Playa Chica</nombre>
+        <descripcion>Zona familiar resguardada por la barra natural de arrecife de coral.</descripcion>
+        <coordenadas>
+          <longitud>-15.4312</longitud>
+          <latitud>28.1425</latitud>
+          <altitud>2</altitud>
+        </coordenadas>
+        <distancia unidades="metros">850</distancia>
+        <fotos>
+          <foto>multimedia/canteras_tablet.jpg</foto>
+        </fotos>
+      </hito>
+      <hito>
+        <nombre>Peña de la Vieja</nombre>
+        <descripcion>Roca emblemática de arrecife que emerge cerca de la orilla de la playa.</descripcion>
+        <coordenadas>
+          <longitud>-15.4331</longitud>
+          <latitud>28.1395</latitud>
+          <altitud>2</altitud>
+        </coordenadas>
+        <distancia unidades="metros">380</distancia>
+        <fotos>
+          <foto>multimedia/canteras.jpg</foto>
+        </fotos>
+      </hito>
+      <hito>
+        <nombre>Zona Canteras Central</nombre>
+        <descripcion>Punto central del paseo marítimo, repleto de terrazas y heladerías frente al mar.</descripcion>
+        <coordenadas>
+          <longitud>-15.4348</longitud>
+          <latitud>28.1362</latitud>
+          <altitud>2</altitud>
+        </coordenadas>
+        <distancia unidades="metros">410</distancia>
+        <fotos>
+          <foto>multimedia/canteras.jpg</foto>
+        </fotos>
+      </hito>
+      <hito>
+        <nombre>Auditorio Alfredo Kraus</nombre>
+        <descripcion>Impresionante edificio del arquitecto Óscar Tusquets que marca el fin de la playa.</descripcion>
+        <coordenadas>
+          <longitud>-15.4475</longitud>
+          <latitud>28.1301</latitud>
+          <altitud>5</altitud>
+        </coordenadas>
+        <distancia unidades="metros">1450</distancia>
+        <fotos>
+          <foto>multimedia/canteras.jpg</foto>
+        </fotos>
+      </hito>
+    </hitos>
+    <planimetria>planimetria3.kml</planimetria>
+    <altimetria>altimetria3.svg</altimetria>
+  </ruta>
+
+</rutas>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos del documento-->
+    <meta charset="UTF-8" />
+    <title>Las Palmas Rutas</title>
+    <meta name="author" content="Eloy Rubio Suárez" />
+    <meta
+      name="description"
+      content="Página con las rutas turísticas de la provincia de Las Palmas"
+    />
+    <meta
+      name="keywords"
+      content="LasPalmas, Islas, España, Rutas, Turismo, Senderismo"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono -->
+    <link rel="icon" href="multimedia/favicon.ico" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilo/layout.css" />
+    <link rel="stylesheet" href="estilo/estilos.css" />
+    <!-- Leaflet CSS para mapas dinámicos -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body>
+    <header>
+      <!-- Cabecera compartida por todos los html -->
+      <h1>
+        <a href="index.html">Las Palmas Desktop</a>
+      </h1>
+      <!-- Menú de la aplicación-->
+      <nav>
+        <a href="index.html" title="Página de inicio">Inicio</a>
+        <a href="gastronomia.html" title="Gastronomía">Gastronomía</a>
+        <a href="rutas.html" title="Rutas" class="activo">Rutas</a>
+        <a href="meteorologia.html" title="Información de la meteorología"
+          >Meteorología</a
+        >
+        <a href="juego.html" title="Juego">Juego</a>
+        <a href="reservas.php" title="Reservas">Reservas</a>
+        <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
+      </nav>
+    </header>
+
+    <!-- Migas de navegación -->
+    <p>
+      Estas en: <a href="index.html">Inicio</a> >> <strong>Rutas</strong>
+    </p>
+
+    <!-- Contenido principal del archivo-->
+    <main>
+      <section>
+        <h3>Cargar información de las rutas</h3>
+        <p>
+          <label for="archivoXML">Selecciona el archivo XML de rutas (rutas.xml):</label>
+          <input type="file" id="archivoXML" accept=".xml" onchange="cargadorRuta.leerArchivoXML(this)" />
+        </p>
+      </section>
+
+      <section>
+        <h3>Cargar perfiles de altimetría</h3>
+        <p>
+          <label for="archivoSVG">Selecciona los archivos de altimetría (SVG):</label>
+          <input type="file" id="archivoSVG" accept=".svg" multiple onchange="cargadorSVG.leerArchivoSVG(this)" />
+        </p>
+      </section>
+
+      <section>
+        <h3>Cargar trazados de las rutas</h3>
+        <p>
+          <label for="archivoKML">Selecciona los archivos de trazado (KML):</label>
+          <input type="file" id="archivoKML" accept=".kml" multiple onchange="cargadorKML.leerArchivoKML(this)" />
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
+      <p>
+        Grado en Ingeniería Informática del Software - Escuela de Ingeniería
+        Informática de Oviedo
+      </p>
+    </footer>
+
+    <!-- Dependencias de scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Leaflet JS para mapas dinámicos -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/rutas.js"></script>
+  </body>
+</html>
