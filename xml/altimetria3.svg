@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="950" height="550" viewBox="0 0 950 550">
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="650" viewBox="0 0 950 650">
   <!-- Estilos CSS internos -->
   <style>
     .titulo { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #111111; }
@@ -18,33 +18,33 @@
   <rect width="100%" height="100%" fill="#fafafa"/>
 
   <!-- Título de la ruta -->
-  <text x="90" y="35" class="titulo">Paseo Marítimo de la Playa de Las Canteras</text>
+  <text x="90" y="35" class="titulo">Ruta de la Caldera de Bandama</text>
 
   <!-- Cuadrícula y Escalas -->
   <line x1="90" y1="400.00" x2="890" y2="400.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="404.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">1 m</text>
+  <text x="80" y="404.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">204 m</text>
   <line x1="90" y1="332.00" x2="890" y2="332.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="336.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">2 m</text>
+  <text x="80" y="336.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">287 m</text>
   <line x1="90" y1="264.00" x2="890" y2="264.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="268.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">3 m</text>
+  <text x="80" y="268.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">370 m</text>
   <line x1="90" y1="196.00" x2="890" y2="196.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="200.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">3 m</text>
+  <text x="80" y="200.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">452 m</text>
   <line x1="90" y1="128.00" x2="890" y2="128.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="132.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">4 m</text>
+  <text x="80" y="132.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">535 m</text>
   <line x1="90" y1="60.00" x2="890" y2="60.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="80" y="64.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">5 m</text>
+  <text x="80" y="64.00" font-family="sans-serif" font-size="11" text-anchor="end" fill="#555555">618 m</text>
   <line x1="90.00" y1="60" x2="90.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
   <text x="90.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.00 km</text>
   <line x1="250.00" y1="60" x2="250.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="250.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.62 km</text>
+  <text x="250.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">0.84 km</text>
   <line x1="410.00" y1="60" x2="410.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="410.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.24 km</text>
+  <text x="410.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.68 km</text>
   <line x1="570.00" y1="60" x2="570.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="570.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">1.85 km</text>
+  <text x="570.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">2.52 km</text>
   <line x1="730.00" y1="60" x2="730.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="730.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">2.47 km</text>
+  <text x="730.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">3.36 km</text>
   <line x1="890.00" y1="60" x2="890.00" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="890.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">3.09 km</text>
+  <text x="890.00" y="420" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#555555">4.20 km</text>
 
   <!-- Ejes -->
   <line x1="90" y1="60" x2="90" y2="400" stroke="#333333" stroke-width="2"/>
@@ -52,35 +52,98 @@
 
   <!-- Título de Ejes -->
   <text x="40" y="45" class="eje-titulo" transform="rotate(-90, 40, 45)" text-anchor="middle">Altitud (metros)</text>
-  <text x="490.0" y="445" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+  <text x="490.0" y="630" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
 
   <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
-  <polygon points="90,400 90.00,360.77 310.06,360.77 408.45,360.77 514.60,360.77 890.00,99.23 890.00,400 90,400" class="perfil-linea" />
+  <polygon points="90,400 90.00,193.45 99.25,192.77 113.98,188.32 129.58,185.14 147.79,181.59 165.48,175.31 175.15,171.32 222.42,156.58 237.83,151.90 263.49,144.03 286.96,136.40 311.53,126.70 319.98,125.15 330.18,122.71 339.65,119.57 343.89,118.20 359.67,112.99 382.48,104.83 384.90,103.80 387.79,103.00 394.94,100.70 401.90,99.23 408.74,101.46 419.69,104.35 432.47,108.82 443.03,112.75 458.32,117.91 468.48,121.12 490.24,126.65 505.00,132.04 516.03,136.00 537.19,140.75 560.13,148.06 568.44,150.48 607.36,165.09 627.15,171.55 648.02,179.77 684.65,187.47 704.60,192.87 712.45,194.73 719.78,196.01 724.90,199.17 741.13,217.45 755.38,231.35 762.52,241.43 769.89,243.93 776.40,250.02 779.31,252.99 783.41,254.86 786.93,257.01 790.65,259.45 792.40,264.62 797.02,267.40 800.18,272.08 802.46,274.50 806.09,275.11 810.27,283.73 813.35,286.32 820.08,293.06 825.32,298.09 835.95,306.55 841.73,313.83 848.18,321.65 852.24,325.61 870.99,338.77 875.63,348.88 885.15,351.43 890.00,360.77 890.00,400 90,400" class="perfil-linea" />
 
   <!-- Hitos, Marcadores y Etiquetas -->
-  <circle cx="90.00" cy="360.77" r="3" fill="#0055ff"/>
-  <line x1="90.00" y1="360.77" x2="90.00" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
-  <circle cx="90.00" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="90.00" y="435" transform="rotate(-90, 90.00, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">La Puntilla</text>
-  <text x="90.00" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
-  <circle cx="310.06" cy="360.77" r="3" fill="#0055ff"/>
-  <line x1="310.06" y1="360.77" x2="310.06" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
-  <circle cx="310.06" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="310.06" y="435" transform="rotate(-90, 310.06, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Playa Chica</text>
-  <text x="310.06" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
-  <circle cx="408.45" cy="360.77" r="3" fill="#0055ff"/>
-  <line x1="408.45" y1="360.77" x2="408.45" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
-  <circle cx="408.45" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="408.45" y="435" transform="rotate(-90, 408.45, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Peña de la Vieja</text>
-  <text x="408.45" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
-  <circle cx="514.60" cy="360.77" r="3" fill="#0055ff"/>
-  <line x1="514.60" y1="360.77" x2="514.60" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
-  <circle cx="514.60" cy="360.77" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="514.60" y="435" transform="rotate(-90, 514.60, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Zona Canteras Central</text>
-  <text x="514.60" y="352.77" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">2m</text>
-  <circle cx="890.00" cy="99.23" r="3" fill="#0055ff"/>
-  <line x1="890.00" y1="99.23" x2="890.00" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
-  <circle cx="890.00" cy="99.23" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="890.00" y="435" transform="rotate(-90, 890.00, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Auditorio Alfredo Kraus</text>
-  <text x="890.00" y="91.23" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">5m</text>
+  <circle cx="90.00" cy="193.45" r="3" fill="#0055ff"/>
+  <circle cx="99.25" cy="192.77" r="3" fill="#0055ff"/>
+  <circle cx="113.98" cy="188.32" r="3" fill="#0055ff"/>
+  <circle cx="129.58" cy="185.14" r="3" fill="#0055ff"/>
+  <circle cx="147.79" cy="181.59" r="3" fill="#0055ff"/>
+  <circle cx="165.48" cy="175.31" r="3" fill="#0055ff"/>
+  <circle cx="175.15" cy="171.32" r="3" fill="#0055ff"/>
+  <line x1="175.15" y1="171.32" x2="175.15" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="175.15" cy="171.32" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="175.15" y="435" transform="rotate(-90, 175.15, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Borde De Caldera</text>
+  <text x="175.15" y="163.32" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">482m</text>
+  <circle cx="222.42" cy="156.58" r="3" fill="#0055ff"/>
+  <circle cx="237.83" cy="151.90" r="3" fill="#0055ff"/>
+  <circle cx="263.49" cy="144.03" r="3" fill="#0055ff"/>
+  <circle cx="286.96" cy="136.40" r="3" fill="#0055ff"/>
+  <circle cx="311.53" cy="126.70" r="3" fill="#0055ff"/>
+  <circle cx="319.98" cy="125.15" r="3" fill="#0055ff"/>
+  <circle cx="330.18" cy="122.71" r="3" fill="#0055ff"/>
+  <circle cx="339.65" cy="119.57" r="3" fill="#0055ff"/>
+  <circle cx="343.89" cy="118.20" r="3" fill="#0055ff"/>
+  <circle cx="359.67" cy="112.99" r="3" fill="#0055ff"/>
+  <circle cx="382.48" cy="104.83" r="3" fill="#0055ff"/>
+  <circle cx="384.90" cy="103.80" r="3" fill="#0055ff"/>
+  <circle cx="387.79" cy="103.00" r="3" fill="#0055ff"/>
+  <circle cx="394.94" cy="100.70" r="3" fill="#0055ff"/>
+  <circle cx="401.90" cy="99.23" r="3" fill="#0055ff"/>
+  <circle cx="408.74" cy="101.46" r="3" fill="#0055ff"/>
+  <line x1="408.74" y1="101.46" x2="408.74" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="408.74" cy="101.46" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="408.74" y="435" transform="rotate(-90, 408.74, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Pico De Bandama</text>
+  <text x="408.74" y="93.46" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">567m</text>
+  <circle cx="419.69" cy="104.35" r="3" fill="#0055ff"/>
+  <circle cx="432.47" cy="108.82" r="3" fill="#0055ff"/>
+  <circle cx="443.03" cy="112.75" r="3" fill="#0055ff"/>
+  <circle cx="458.32" cy="117.91" r="3" fill="#0055ff"/>
+  <circle cx="468.48" cy="121.12" r="3" fill="#0055ff"/>
+  <circle cx="490.24" cy="126.65" r="3" fill="#0055ff"/>
+  <circle cx="505.00" cy="132.04" r="3" fill="#0055ff"/>
+  <circle cx="516.03" cy="136.00" r="3" fill="#0055ff"/>
+  <circle cx="537.19" cy="140.75" r="3" fill="#0055ff"/>
+  <circle cx="560.13" cy="148.06" r="3" fill="#0055ff"/>
+  <circle cx="568.44" cy="150.48" r="3" fill="#0055ff"/>
+  <circle cx="607.36" cy="165.09" r="3" fill="#0055ff"/>
+  <circle cx="627.15" cy="171.55" r="3" fill="#0055ff"/>
+  <circle cx="648.02" cy="179.77" r="3" fill="#0055ff"/>
+  <circle cx="684.65" cy="187.47" r="3" fill="#0055ff"/>
+  <circle cx="704.60" cy="192.87" r="3" fill="#0055ff"/>
+  <circle cx="712.45" cy="194.73" r="3" fill="#0055ff"/>
+  <circle cx="719.78" cy="196.01" r="3" fill="#0055ff"/>
+  <circle cx="724.90" cy="199.17" r="3" fill="#0055ff"/>
+  <line x1="724.90" y1="199.17" x2="724.90" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="724.90" cy="199.17" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="724.90" y="435" transform="rotate(-90, 724.90, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Mirador De Caldera</text>
+  <text x="724.90" y="191.17" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">449m</text>
+  <circle cx="741.13" cy="217.45" r="3" fill="#0055ff"/>
+  <circle cx="755.38" cy="231.35" r="3" fill="#0055ff"/>
+  <circle cx="762.52" cy="241.43" r="3" fill="#0055ff"/>
+  <line x1="762.52" y1="241.43" x2="762.52" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="762.52" cy="241.43" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="762.52" y="435" transform="rotate(-90, 762.52, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Mirador Dentro De La Caldera</text>
+  <text x="762.52" y="233.43" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">397m</text>
+  <circle cx="769.89" cy="243.93" r="3" fill="#0055ff"/>
+  <circle cx="776.40" cy="250.02" r="3" fill="#0055ff"/>
+  <circle cx="779.31" cy="252.99" r="3" fill="#0055ff"/>
+  <circle cx="783.41" cy="254.86" r="3" fill="#0055ff"/>
+  <circle cx="786.93" cy="257.01" r="3" fill="#0055ff"/>
+  <circle cx="790.65" cy="259.45" r="3" fill="#0055ff"/>
+  <circle cx="792.40" cy="264.62" r="3" fill="#0055ff"/>
+  <circle cx="797.02" cy="267.40" r="3" fill="#0055ff"/>
+  <circle cx="800.18" cy="272.08" r="3" fill="#0055ff"/>
+  <circle cx="802.46" cy="274.50" r="3" fill="#0055ff"/>
+  <circle cx="806.09" cy="275.11" r="3" fill="#0055ff"/>
+  <circle cx="810.27" cy="283.73" r="3" fill="#0055ff"/>
+  <circle cx="813.35" cy="286.32" r="3" fill="#0055ff"/>
+  <circle cx="820.08" cy="293.06" r="3" fill="#0055ff"/>
+  <circle cx="825.32" cy="298.09" r="3" fill="#0055ff"/>
+  <circle cx="835.95" cy="306.55" r="3" fill="#0055ff"/>
+  <circle cx="841.73" cy="313.83" r="3" fill="#0055ff"/>
+  <circle cx="848.18" cy="321.65" r="3" fill="#0055ff"/>
+  <circle cx="852.24" cy="325.61" r="3" fill="#0055ff"/>
+  <circle cx="870.99" cy="338.77" r="3" fill="#0055ff"/>
+  <circle cx="875.63" cy="348.88" r="3" fill="#0055ff"/>
+  <circle cx="885.15" cy="351.43" r="3" fill="#0055ff"/>
+  <line x1="885.15" y1="351.43" x2="885.15" y2="400" stroke="#ff6600" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="885.15" cy="351.43" r="5" fill="#ff6600" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="885.15" y="435" transform="rotate(-90, 885.15, 435)" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="end">Centro De La Caldera</text>
+  <text x="885.15" y="343.43" font-family="sans-serif" font-size="9" fill="#ff6600" text-anchor="middle" font-weight="bold">263m</text>
+  <circle cx="890.00" cy="360.77" r="3" fill="#0055ff"/>
 </svg>

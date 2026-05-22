@@ -63,13 +63,13 @@ def xml_to_svg(xml_file):
             
         # Dimensiones del SVG
         svg_width = 950
-        svg_height = 550
+        svg_height = 650
         
         # Márgenes del gráfico
         pad_left = 90
         pad_right = 60
         pad_top = 60
-        pad_bottom = 150  # Mayor margen inferior para las etiquetas de texto vertical
+        pad_bottom = 250  # Mayor margen inferior para las etiquetas de texto vertical (evita que se corten)
         
         plot_width = svg_width - pad_left - pad_right
         plot_height = svg_height - pad_top - pad_bottom
@@ -176,7 +176,7 @@ def xml_to_svg(xml_file):
 
   <!-- Título de Ejes -->
   <text x="{pad_left - 50}" y="45" class="eje-titulo" transform="rotate(-90, {pad_left - 50}, 45)" text-anchor="middle">Altitud (metros)</text>
-  <text x="{pad_left + plot_width / 2}" y="{baseline_y + 45}" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+  <text x="{pad_left + plot_width / 2}" y="{svg_height - 20}" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
 
   <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
   <polygon points="{closed_points_str}" class="perfil-linea" />

@@ -1,0 +1,3 @@
+id,id_usuario,id_recurso,plazas_reservadas,estado_reserva,total_pagar
+1,1,1,2,confirmada,30.00
+2,2,4,4,confirmada,20.00
