@@ -256,18 +256,19 @@ class CargadorKML {
             // Extraer el título del propio archivo KML
             const routeTitle = $(kmlData).find("Document > name").text().trim() || $(kmlData).find("name").first().text().trim() || file.name;
 
-            const article = $(`
-              <article>
-                <h3>Mapa dinámico: ${routeTitle}</h3>
-                <figure></figure>
-              </article>
-            `);
-            kmlSection.append(article);
+            kmlSection.append(`<h3>Mapa dinámico: ${routeTitle}</h3>`);
+            const mapFigure = $(`<figure></figure>`);
+            kmlSection.append(mapFigure);
             
-            const mapDiv = article.children("figure")[0];
+            const mapDiv = mapFigure[0];
             if (mapDiv) {
               // Inicializar mapa de Leaflet
               const map = L.map(mapDiv).setView([28.0, -15.5], 10);
+
+              // Recalcular tamaño de Leaflet para asegurar que dibuje la línea y marcadores
+              setTimeout(() => {
+                map.invalidateSize();
+              }, 200);
 
 
 

@@ -245,10 +245,11 @@ article svg {
     margin: 1em 0;
 }
 
-/* ESPECIFICIDAD: 0,0,2 */
+/* ESPECIFICIDAD: 0,0,3 */
 /* Contenedor del mapa dinámico */
-article figure {
+main section > figure {
     width: 100%;
+    max-width: none;
     height: 25rem;
     margin: 1em 0;
     border: 0.0625rem solid #cccccc;
