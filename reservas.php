@@ -1,3 +1,5 @@
+<!--CHECKED STATIC CONTENT-->
+<!--CHECKED DYNAMIC CONTENT-->
 <?php
 // Iniciar sesión
 session_start();
@@ -209,309 +211,6 @@ if (isset($_SESSION['usuario_id'])) {
     <link rel="stylesheet" href="estilo/layout.css" />
     <link rel="stylesheet" href="estilo/estilos.css" />
 
-    <style>
-        /* Estilos específicos y premium para la sección de Reservas */
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        .alert {
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        .alert-success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        .alert-error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .auth-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .auth-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .panel-form {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .panel-form h3 {
-            margin-top: 0;
-            color: #004685;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #4a5568;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.6rem;
-            border: 1px solid #cbd5e0;
-            border-radius: 4px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        .form-control:focus {
-            border-color: #004685;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(0,70,133,0.15);
-        }
-
-        .btn {
-            background-color: #004685;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background-color: #002d57;
-        }
-
-        .btn-secondary {
-            background-color: #718096;
-        }
-
-        .btn-secondary:hover {
-            background-color: #4a5568;
-        }
-
-        .btn-danger {
-            background-color: #e53e3e;
-            padding: 0.4rem 0.8rem;
-            font-size: 0.85rem;
-        }
-
-        .btn-danger:hover {
-            background-color: #c53030;
-        }
-
-        .btn-confirm {
-            background-color: #38a169;
-        }
-
-        .btn-confirm:hover {
-            background-color: #276749;
-        }
-
-        .user-welcome-bar {
-            background-color: #004685;
-            color: white;
-            padding: 1rem;
-            border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .user-welcome-bar p {
-            margin: 0;
-            font-weight: bold;
-        }
-
-        .user-welcome-bar form {
-            margin: 0;
-        }
-
-        .recursos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .recurso-card {
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .recurso-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.08);
-        }
-
-        .recurso-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-        }
-
-        .recurso-type {
-            background-color: #ebf8ff;
-            color: #2b6cb0;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .recurso-price {
-            font-size: 1.25rem;
-            color: #2f855a;
-            font-weight: bold;
-        }
-
-        .recurso-card h4 {
-            margin: 0 0 0.75rem 0;
-            font-size: 1.15rem;
-            color: #2d3748;
-        }
-
-        .recurso-card p {
-            margin: 0 0 1rem 0;
-            font-size: 0.9rem;
-            color: #4a5568;
-            line-height: 1.4;
-        }
-
-        .recurso-meta {
-            font-size: 0.8rem;
-            color: #718096;
-            background-color: #f7fafc;
-            padding: 0.75rem;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-        }
-
-        .recurso-meta div {
-            margin-bottom: 0.4rem;
-        }
-
-        .recurso-meta div:last-child {
-            margin-bottom: 0;
-        }
-
-        .recurso-reserve-form {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-        }
-
-        .recurso-reserve-form input[type="number"] {
-            width: 70px;
-            padding: 0.4rem;
-            border: 1px solid #cbd5e0;
-            border-radius: 4px;
-        }
-
-        .presupuesto-box {
-            background-color: #ebf8ff;
-            border-left: 5px solid #3182ce;
-            padding: 1.5rem;
-            border-radius: 4px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .presupuesto-box h3 {
-            margin-top: 0;
-            color: #2b6cb0;
-        }
-
-        .presupuesto-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        .presupuesto-table th, .presupuesto-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #cbd5e0;
-        }
-
-        .presupuesto-table tr.total-row {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2d3748;
-            background-color: #e2e8f0;
-        }
-
-        .reservas-table-container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            overflow-x: auto;
-        }
-
-        .reservas-table-container h3 {
-            margin-top: 0;
-            color: #004685;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        .tab-reservas {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .tab-reservas th, .tab-reservas td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .tab-reservas th {
-            background-color: #f7fafc;
-            color: #4a5568;
-            font-weight: bold;
-        }
-
-        .tab-reservas tr:hover {
-            background-color: #f8fafc;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -524,7 +223,7 @@ if (isset($_SESSION['usuario_id'])) {
             <a href="rutas.html" title="Rutas">Rutas</a>
             <a href="meteorologia.html" title="Información de la meteorología">Meteorología</a>
             <a href="juego.html" title="Juego">Juego</a>
-            <a href="reservas.php" title="Reservas" class="activo">Reservas</a>
+            <a href="reservas.php" title="Reservas">Reservas</a>
             <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
         </nav>
     </header>
@@ -537,69 +236,73 @@ if (isset($_SESSION['usuario_id'])) {
         <h2>Central de Reservas Turísticas</h2>
 
         <?php if (!empty($mensaje)): ?>
-            <div class="alert alert-<?php echo $tipoMensaje; ?>">
-                <?php echo htmlspecialchars($mensaje); ?>
-            </div>
+            <p>
+                Mensaje: <?php echo htmlspecialchars($mensaje); ?>
+            </p>
         <?php endif; ?>
 
         <!-- Gestión de Sesión de Usuario -->
         <?php if (isset($_SESSION['usuario_id'])): ?>
-            <div class="user-welcome-bar">
+            <section>
+                <h3>Sesión de Usuario</h3>
                 <p>Sesión activa: <?php echo htmlspecialchars($_SESSION['usuario_nombre']); ?> (<?php echo htmlspecialchars($_SESSION['usuario_email']); ?>)</p>
                 <form action="reservas.php" method="POST">
                     <input type="hidden" name="accion" value="logout" />
-                    <button type="submit" class="btn btn-secondary">Cerrar Sesión</button>
+                    <button type="submit">Cerrar Sesión</button>
                 </form>
-            </div>
+            </section>
         <?php else: ?>
             <!-- Formularios de Registro y Login para usuarios no autenticados -->
-            <div class="auth-container">
-                <!-- Registro -->
-                <div class="panel-form">
-                    <h3>Registro de Nuevo Usuario</h3>
-                    <form action="reservas.php" method="POST">
-                        <input type="hidden" name="accion" value="registro" />
-                        <div class="form-group">
-                            <label for="reg_nombre">Nombre Completo:</label>
-                            <input type="text" id="reg_nombre" name="nombre" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="reg_email">Correo Electrónico:</label>
-                            <input type="email" id="reg_email" name="email" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="reg_password">Contraseña:</label>
-                            <input type="password" id="reg_password" name="password" class="form-control" required />
-                        </div>
-                        <button type="submit" class="btn">Registrarse</button>
-                    </form>
-                </div>
+            <!-- Registro -->
+            <section>
+                <h3>Registro de Nuevo Usuario</h3>
+                <form action="reservas.php" method="POST">
+                    <input type="hidden" name="accion" value="registro" />
+                    <p>
+                        <label>Nombre Completo:
+                            <input type="text" name="nombre" required />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Correo Electrónico:
+                            <input type="email" name="email" required />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Contraseña:
+                            <input type="password" name="password" required />
+                        </label>
+                    </p>
+                    <button type="submit">Registrarse</button>
+                </form>
+            </section>
 
-                <!-- Login -->
-                <div class="panel-form">
-                    <h3>Iniciar Sesión</h3>
-                    <form action="reservas.php" method="POST">
-                        <input type="hidden" name="accion" value="login" />
-                        <div class="form-group">
-                            <label for="login_email">Correo Electrónico:</label>
-                            <input type="email" id="login_email" name="email" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="login_password">Contraseña:</label>
-                            <input type="password" id="login_password" name="password" class="form-control" required />
-                        </div>
-                        <button type="submit" class="btn">Acceder</button>
-                    </form>
-                </div>
-            </div>
+            <!-- Login -->
+            <section>
+                <h3>Iniciar Sesión</h3>
+                <form action="reservas.php" method="POST">
+                    <input type="hidden" name="accion" value="login" />
+                    <p>
+                        <label>Correo Electrónico:
+                            <input type="email" name="email" required />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Contraseña:
+                            <input type="password" name="password" required />
+                        </label>
+                    </p>
+                    <button type="submit">Acceder</button>
+                </form>
+            </section>
         <?php endif; ?>
 
         <!-- Visualización del Presupuesto (si se ha generado) -->
         <?php if ($presupuesto): ?>
-            <div class="presupuesto-box">
+            <section>
                 <h3>Presupuesto Generado</h3>
                 <p>Por favor, revisa los detalles antes de confirmar la reserva.</p>
-                <table class="presupuesto-table">
+                <table>
                     <thead>
                         <tr>
                             <th>Recurso Turístico</th>
@@ -613,29 +316,27 @@ if (isset($_SESSION['usuario_id'])) {
                             <td><?php echo number_format($presupuesto['precio_unitario'], 2); ?> €</td>
                             <td><?php echo $presupuesto['plazas']; ?></td>
                         </tr>
-                        <tr class="total-row">
-                            <td colspan="2">Importe Total a Confirmar:</td>
+                        <tr>
+                            <th>Importe Total a Confirmar:</th>
                             <td><?php echo number_format($presupuesto['total'], 2); ?> €</td>
                         </tr>
                     </tbody>
                 </table>
-                <div style="display: flex; gap: 1rem;">
-                    <form action="reservas.php" method="POST">
-                        <input type="hidden" name="accion" value="confirmar_reserva" />
-                        <input type="hidden" name="recurso_id" value="<?php echo $presupuesto['recurso_id']; ?>" />
-                        <input type="hidden" name="plazas" value="<?php echo $presupuesto['plazas']; ?>" />
-                        <button type="submit" class="btn btn-confirm">Confirmar y Pagar</button>
-                    </form>
-                    <a href="reservas.php" class="btn btn-secondary">Descartar Presupuesto</a>
-                </div>
-            </div>
+                <form action="reservas.php" method="POST">
+                    <input type="hidden" name="accion" value="confirmar_reserva" />
+                    <input type="hidden" name="recurso_id" value="<?php echo $presupuesto['recurso_id']; ?>" />
+                    <input type="hidden" name="plazas" value="<?php echo $presupuesto['plazas']; ?>" />
+                    <button type="submit">Confirmar y Pagar</button>
+                    <a href="reservas.php">Descartar Presupuesto</a>
+                </form>
+            </section>
         <?php endif; ?>
 
         <!-- Consulta de Reservas Realizadas -->
         <?php if (isset($_SESSION['usuario_id']) && !empty($reservasUsuario)): ?>
-            <div class="reservas-table-container">
+            <section>
                 <h3>Tus Recursos Reservados</h3>
-                <table class="tab-reservas">
+                <table>
                     <thead>
                         <tr>
                             <th>Recurso Turístico</th>
@@ -658,63 +359,60 @@ if (isset($_SESSION['usuario_id'])) {
                                     <form action="reservas.php" method="POST" onsubmit="return confirm('¿Seguro que deseas anular esta reserva?');">
                                         <input type="hidden" name="accion" value="anular_reserva" />
                                         <input type="hidden" name="reserva_id" value="<?php echo $res['id']; ?>" />
-                                        <button type="submit" class="btn btn-danger">Anular Reserva</button>
+                                        <button type="submit">Anular Reserva</button>
                                     </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            </div>
+            </section>
         <?php endif; ?>
 
         <!-- Listado de Recursos Turísticos Disponibles -->
-        <h3>Recursos Turísticos Disponibles</h3>
-        <p>A continuación se detallan los recursos disponibles en Las Palmas que puedes reservar para tu visita:</p>
-        
-        <div class="recursos-grid">
+        <section>
+            <h3>Recursos Turísticos Disponibles</h3>
+            <p>A continuación se detallan los recursos disponibles en Las Palmas que puedes reservar para tu visita:</p>
+            
             <?php foreach ($recursos as $rec): ?>
                 <?php 
                 $disponibles = $recursoModel->obtenerPlazasDisponibles($rec['id']);
                 ?>
-                <div class="recurso-card">
-                    <div>
-                        <div class="recurso-header">
-                            <span class="recurso-type"><?php echo htmlspecialchars($rec['nombre_tipo']); ?></span>
-                            <span class="recurso-price"><?php echo number_format($rec['precio'], 2); ?> €</span>
-                        </div>
-                        <h4><?php echo htmlspecialchars($rec['nombre']); ?></h4>
-                        <p><?php echo htmlspecialchars($rec['descripcion']); ?></p>
-                        
-                        <div class="recurso-meta">
-                            <div><strong>Inicio:</strong> <?php echo htmlspecialchars($rec['fecha_inicio']); ?></div>
-                            <div><strong>Fin:</strong> <?php echo htmlspecialchars($rec['fecha_fin']); ?></div>
-                            <div><strong>Capacidad Máxima:</strong> <?php echo $rec['capacidad_maxima']; ?> plazas</div>
-                            <div><strong>Plazas Disponibles:</strong> <?php echo $disponibles; ?> plazas</div>
-                            <div><strong>Gestionado por:</strong> <?php echo htmlspecialchars($rec['nombre_agencia']); ?></div>
-                        </div>
-                    </div>
+                <article>
+                    <p>
+                        <span><?php echo htmlspecialchars($rec['nombre_tipo']); ?></span> - 
+                        <?php echo number_format($rec['precio'], 2); ?> €
+                    </p>
+                    <h4><?php echo htmlspecialchars($rec['nombre']); ?></h4>
+                    <p><?php echo htmlspecialchars($rec['descripcion']); ?></p>
+                    
+                    <ul>
+                        <li>Inicio: <?php echo htmlspecialchars($rec['fecha_inicio']); ?></li>
+                        <li>Fin: <?php echo htmlspecialchars($rec['fecha_fin']); ?></li>
+                        <li>Capacidad Máxima: <?php echo $rec['capacidad_maxima']; ?> plazas</li>
+                        <li>Plazas Disponibles: <?php echo $disponibles; ?> plazas</li>
+                        <li>Gestionado por: <?php echo htmlspecialchars($rec['nombre_agencia']); ?></li>
+                    </ul>
 
-                    <div>
-                        <?php if (isset($_SESSION['usuario_id'])): ?>
-                            <?php if ($disponibles > 0): ?>
-                                <form action="reservas.php" method="POST" class="recurso-reserve-form">
-                                    <input type="hidden" name="accion" value="generar_presupuesto" />
-                                    <input type="hidden" name="recurso_id" value="<?php echo $rec['id']; ?>" />
-                                    <label for="plazas_<?php echo $rec['id']; ?>" style="display:none;">Plazas:</label>
-                                    <input type="number" id="plazas_<?php echo $rec['id']; ?>" name="plazas" min="1" max="<?php echo $disponibles; ?>" value="1" required />
-                                    <button type="submit" class="btn">Reservar</button>
-                                </form>
-                            <?php else: ?>
-                                <button class="btn btn-secondary" disabled style="width:100%;">Agotado</button>
-                            <?php endif; ?>
+                    <?php if (isset($_SESSION['usuario_id'])): ?>
+                        <?php if ($disponibles > 0): ?>
+                            <form action="reservas.php" method="POST">
+                                <input type="hidden" name="accion" value="generar_presupuesto" />
+                                <input type="hidden" name="recurso_id" value="<?php echo $rec['id']; ?>" />
+                                <label>Plazas:
+                                    <input type="number" name="plazas" min="1" max="<?php echo $disponibles; ?>" value="1" required />
+                                </label>
+                                <button type="submit">Reservar</button>
+                            </form>
                         <?php else: ?>
-                            <p style="margin: 0; font-size: 0.85rem; color: #a0aec0; text-align: center;">Inicia sesión para reservar</p>
+                            <button disabled>Agotado</button>
                         <?php endif; ?>
-                    </div>
-                </div>
+                    <?php else: ?>
+                        <p>Inicia sesión para reservar</p>
+                    <?php endif; ?>
+                </article>
             <?php endforeach; ?>
-        </div>
+        </section>
     </main>
 
     <footer>

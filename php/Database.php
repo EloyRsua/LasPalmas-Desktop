@@ -42,13 +42,19 @@ class Database {
 
     private function verificarEInicializarDB() {
         // Comprobar si existe la tabla 'usuarios'
+        $tablasExistentes = true;
         try {
-            $result = $this->conn->query("SELECT 1 FROM usuarios LIMIT 1");
+            $this->conn->query("SELECT 1 FROM usuarios LIMIT 1");
         } catch (Exception $e) {
-            // Si hay excepción, asumimos que no existen las tablas y las creamos
-            $this->ejecutarScriptSQL();
-            $this->cargarDatosDesdeCSV();
+            $tablasExistentes = false;
         }
+
+        if (!$tablasExistentes) {
+            $this->ejecutarScriptSQL();
+        }
+
+        // Cargar datos desde los CSVs en aquellas tablas que estén vacías
+        $this->cargarDatosDesdeCSV();
     }
 
     private function ejecutarScriptSQL() {
@@ -70,7 +76,21 @@ class Database {
         ];
 
         foreach ($tablasCsv as $tabla => $campos) {
-            $csvPath = __DIR__ . '/' . $tabla . '.csv';
+            // Solo cargar datos si la tabla existe y está vacía
+            try {
+                $stmt = $this->conn->query("SELECT COUNT(*) as cnt FROM `{$tabla}`");
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                if (intval($row['cnt']) > 0) {
+                    continue; // Ya contiene datos, pasar a la siguiente tabla
+                }
+            } catch (Exception $e) {
+                // Si la tabla no existe todavía, saltar para evitar errores
+                continue;
+            }
+
+            // Mapear el nombre del archivo CSV (recursos_turisticos usa recursos.csv)
+            $nombreCsv = ($tabla === 'recursos_turisticos') ? 'recursos' : $tabla;
+            $csvPath = __DIR__ . '/' . $nombreCsv . '.csv';
             if (!file_exists($csvPath)) {
                 continue;
             }
@@ -97,7 +117,11 @@ class Database {
                 if (count($row) > count($campos)) {
                     $row = array_slice($row, 0, count($campos));
                 }
-                $stmt->execute($row);
+                try {
+                    $stmt->execute($row);
+                } catch (Exception $e) {
+                    // Ignorar filas problemáticas individuales
+                }
             }
             fclose($file);
         }

@@ -87,7 +87,7 @@ class CargadorRuta {
 
       // Obtener la imagen de la ruta a partir del primer hito
       const fotoRuta = $(ruta).children("hitos").children("hito").first().children("fotos").children("foto").first().text().trim();
-      const fotoRutaHtml = fotoRuta ? `<img src="${fotoRuta}" alt="Imagen de la ruta ${nombre}" style="max-width:400px; height:auto; display:block; margin:1em 0; border-radius:8px;" />` : "";
+      const fotoRutaHtml = fotoRuta ? `<img src="${fotoRuta}" alt="Imagen de la ruta ${nombre}" />` : "";
 
       // Procesar hitos
       let hitosHtml = "<ol>";
@@ -103,7 +103,7 @@ class CargadorRuta {
         let hitoFotosHtml = "";
         $(this).children("fotos").children("foto").each(function() {
           const fotoPath = $(this).text().trim();
-          hitoFotosHtml += `<img src="${fotoPath}" alt="Imagen del hito ${hitoNombre}" style="max-width:250px; display:block; margin:0.5em 0; border-radius: 4px;" />`;
+          hitoFotosHtml += `<img src="${fotoPath}" alt="Imagen del hito ${hitoNombre}" />`;
         });
 
         hitosHtml += `
@@ -205,7 +205,7 @@ class CargadorSVG {
             const articleHtml = `
               <article>
                 <h3>Perfil de altimetría: ${routeTitle}</h3>
-                <div>${svgContent}</div>
+                ${svgContent}
               </article>
             `;
             svgSection.append(articleHtml);
@@ -259,15 +259,17 @@ class CargadorKML {
             const article = $(`
               <article>
                 <h3>Mapa dinámico: ${routeTitle}</h3>
-                <div style="width:100%; height:400px; margin: 1em 0; border: 0.0625rem solid #cccccc; border-radius: 0.5rem; position:relative; z-index: 1;"></div>
+                <figure></figure>
               </article>
             `);
             kmlSection.append(article);
             
-            const mapDiv = article.children("div")[0];
+            const mapDiv = article.children("figure")[0];
             if (mapDiv) {
               // Inicializar mapa de Leaflet
               const map = L.map(mapDiv).setView([28.0, -15.5], 10);
+
+
 
               // Cargar capa de OpenStreetMap
               L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

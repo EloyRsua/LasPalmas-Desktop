@@ -1,24 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="950" height="650" viewBox="0 0 950 650">
-  <!-- Estilos CSS internos -->
-  <style>
-    .titulo { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #111111; }
-    .eje-titulo { font-family: sans-serif; font-size: 12px; font-weight: bold; fill: #333333; }
-    .perfil-linea { fill: url(#gradiente-terreno); stroke: #0055ff; stroke-width: 3; }
-  </style>
-
-  <!-- Gradiente para el relleno de la altimetría -->
-  <defs>
-    <linearGradient id="gradiente-terreno" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0055ff" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#0055ff" stop-opacity="0.05" />
-    </linearGradient>
-  </defs>
-
   <!-- Fondo -->
   <rect width="100%" height="100%" fill="#fafafa"/>
 
   <!-- Título de la ruta -->
-  <text x="90" y="35" class="titulo">Ruta de la Degollada de la Goleta al Roque Nublo</text>
+  <text x="90" y="35" font-family="sans-serif" font-size="16" font-weight="bold" fill="#111111">Ruta de la Degollada de la Goleta al Roque Nublo</text>
 
   <!-- Cuadrícula y Escalas -->
   <line x1="90" y1="400.00" x2="890" y2="400.00" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
@@ -51,11 +36,11 @@
   <line x1="90" y1="400" x2="890" y2="400" stroke="#333333" stroke-width="2"/>
 
   <!-- Título de Ejes -->
-  <text x="40" y="45" class="eje-titulo" transform="rotate(-90, 40, 45)" text-anchor="middle">Altitud (metros)</text>
-  <text x="490.0" y="630" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+  <text x="40" y="45" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333333" transform="rotate(-90, 40, 45)" text-anchor="middle">Altitud (metros)</text>
+  <text x="490.0" y="630" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
 
   <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
-  <polygon points="90,400 90.00,293.51 94.92,293.94 99.78,295.48 106.01,304.22 111.90,306.73 118.30,308.45 139.19,315.82 155.64,314.72 177.39,319.62 193.59,325.41 214.39,330.03 225.37,338.05 233.85,340.26 239.24,347.70 246.35,351.89 264.74,354.94 269.65,360.77 281.64,353.36 290.58,351.61 296.24,346.15 301.59,339.69 308.39,340.35 321.90,326.39 330.29,324.17 347.47,320.61 368.20,317.45 392.97,314.37 418.10,305.86 443.87,301.12 505.44,291.11 538.57,276.19 575.91,262.23 598.51,240.68 629.78,224.80 646.15,212.81 662.24,195.76 690.35,188.00 716.84,171.25 730.26,154.77 741.72,155.27 766.71,152.09 787.09,153.29 812.51,128.07 855.52,111.16 879.33,99.23 890.00,111.78 890.00,400 90,400" class="perfil-linea" />
+  <polygon points="90,400 90.00,293.51 94.92,293.94 99.78,295.48 106.01,304.22 111.90,306.73 118.30,308.45 139.19,315.82 155.64,314.72 177.39,319.62 193.59,325.41 214.39,330.03 225.37,338.05 233.85,340.26 239.24,347.70 246.35,351.89 264.74,354.94 269.65,360.77 281.64,353.36 290.58,351.61 296.24,346.15 301.59,339.69 308.39,340.35 321.90,326.39 330.29,324.17 347.47,320.61 368.20,317.45 392.97,314.37 418.10,305.86 443.87,301.12 505.44,291.11 538.57,276.19 575.91,262.23 598.51,240.68 629.78,224.80 646.15,212.81 662.24,195.76 690.35,188.00 716.84,171.25 730.26,154.77 741.72,155.27 766.71,152.09 787.09,153.29 812.51,128.07 855.52,111.16 879.33,99.23 890.00,111.78 890.00,400 90,400" fill="rgba(0, 85, 255, 0.25)" stroke="#0055ff" stroke-width="3" />
 
   <!-- Hitos, Marcadores y Etiquetas -->
   <circle cx="90.00" cy="293.51" r="3" fill="#0055ff"/>

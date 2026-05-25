@@ -146,26 +146,11 @@ def xml_to_svg(xml_file):
         markers_str = "\n".join(markers_and_labels)
         
         svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}">
-  <!-- Estilos CSS internos -->
-  <style>
-    .titulo {{ font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #111111; }}
-    .eje-titulo {{ font-family: sans-serif; font-size: 12px; font-weight: bold; fill: #333333; }}
-    .perfil-linea {{ fill: url(#gradiente-terreno); stroke: #0055ff; stroke-width: 3; }}
-  </style>
-
-  <!-- Gradiente para el relleno de la altimetría -->
-  <defs>
-    <linearGradient id="gradiente-terreno" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0055ff" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#0055ff" stop-opacity="0.05" />
-    </linearGradient>
-  </defs>
-
   <!-- Fondo -->
   <rect width="100%" height="100%" fill="#fafafa"/>
 
   <!-- Título de la ruta -->
-  <text x="{pad_left}" y="35" class="titulo">{nombre_ruta}</text>
+  <text x="{pad_left}" y="35" font-family="sans-serif" font-size="16" font-weight="bold" fill="#111111">{nombre_ruta}</text>
 
   <!-- Cuadrícula y Escalas -->
 {grid_str}
@@ -175,11 +160,11 @@ def xml_to_svg(xml_file):
   <line x1="{pad_left}" y1="{baseline_y}" x2="{pad_left + plot_width}" y2="{baseline_y}" stroke="#333333" stroke-width="2"/>
 
   <!-- Título de Ejes -->
-  <text x="{pad_left - 50}" y="45" class="eje-titulo" transform="rotate(-90, {pad_left - 50}, 45)" text-anchor="middle">Altitud (metros)</text>
-  <text x="{pad_left + plot_width / 2}" y="{svg_height - 20}" class="eje-titulo" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
+  <text x="{pad_left - 50}" y="45" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333333" transform="rotate(-90, {pad_left - 50}, 45)" text-anchor="middle">Altitud (metros)</text>
+  <text x="{pad_left + plot_width / 2}" y="{svg_height - 20}" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">Distancia Horizontal (kilómetros)</text>
 
   <!-- Polilínea Cerrada (Perfil de Altimetría del Terreno) -->
-  <polygon points="{closed_points_str}" class="perfil-linea" />
+  <polygon points="{closed_points_str}" fill="rgba(0, 85, 255, 0.25)" stroke="#0055ff" stroke-width="3" />
 
   <!-- Hitos, Marcadores y Etiquetas -->
 {markers_str}

@@ -1,101 +1,88 @@
-<!doctype html>
+<!--CHECKED-->
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Metadatos del documento-->
-    <meta charset="UTF-8" />
-    <!-- Codificación-->
-    <title>Las Palmas Gastronomía</title>
-    <!-- Titulo, el que aparece en la pestaña del navegador-->
-    <meta name="author" content="Eloy Rubio Suárez" />
-    <!-- Autor -->
-    <meta
-      name="description"
-      content="Página con la gastronomía de la provincia de Las Palmas"
-    />
-    <!-- Descripción breve del contenido-->
-    <meta
-      name="keywords"
-      content="LasPalmas, Islas, España, Comida, Gastronomía"
-    />
-    <!--Keywords-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Icono -->
-    <link rel="icon" href="multimedia/favicon.ico" />
-    <!-- Estilos -->
-    <link rel="stylesheet" href="estilo/layout.css" />
-    <link rel="stylesheet" href="estilo/estilos.css" />
-  </head>
-  <body>
-    <header>
-      <!-- Cabecera compartida por todos los html -->
-      <!-- Datos con el contenidos que aparece en el navegador -->
-      <h1>
-        <a href="index.html">Las Palmas Desktop</a>
-      </h1>
-      <!-- Menú de la aplicación-->
-      <nav>
-        <a href="index.html" title="Página de inicio" class="activo">Inicio</a>
-        <a href="gastronomia.html" title="Gastronomía">Gastronomía</a>
-        <a href="rutas.html" title="Rutas">Rutas</a>
-        <a href="meteorologia.html" title="Información de la meteorología"
-          >Meteorología</a
-        >
-        <a href="juego.html" title="Juego">Juego</a>
-        <a href="reservas.php" title="Reservas">Reservas</a>
-        <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
-      </nav>
-    </header>
 
-    <!-- Migas de navegación -->
-    <p>Estas en: Inicio</p>
+<head>
+  <!-- Metadatos del documento-->
+  <meta charset="UTF-8" />
+  <!-- Codificación-->
+  <title>Las Palmas Gastronomía</title>
+  <!-- Titulo, el que aparece en la pestaña del navegador-->
+  <meta name="author" content="Eloy Rubio Suárez" />
+  <!-- Autor -->
+  <meta name="description" content="Página con la gastronomía de la provincia de Las Palmas" />
+  <!-- Descripción breve del contenido-->
+  <meta name="keywords" content="LasPalmas, Islas, España, Comida, Gastronomía" />
+  <!--Keywords-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Icono -->
+  <link rel="icon" href="multimedia/favicon.ico" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilo/layout.css" />
+  <link rel="stylesheet" href="estilo/estilos.css" />
+</head>
 
-    <main>
-      <section>
-        <h2>Explora Las Palmas</h2>
-        <article>
-          <h3>Galería de Imágenes</h3>
-          <figure>
-            <picture>
-              <source
-                media="(max-width: 465px)"
-                srcset="multimedia/mapa_las_palmas_movil.jpg"
-              />
-              <source
-                media="(max-width: 799px)"
-                srcset="multimedia/mapa_las_palmas_tablet.jpg"
-              />
-              <img
-                src="multimedia/mapa_las_palmas.jpg"
-                alt="Mapa de situación de la provincia de Las Palmas"
-              />
-            </picture>
-            <figcaption>Mapa de situación de la provincia</figcaption>
+<body>
+  <header>
+    <!-- Cabecera compartida por todos los html -->
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <h1>
+      <a href="index.html">Las Palmas Desktop</a>
+    </h1>
+    <!-- Menú de la aplicación-->
+    <nav>
+      <a href="index.html" title="Página de inicio" class="activo">Inicio</a>
+      <a href="gastronomia.html" title="Gastronomía">Gastronomía</a>
+      <a href="rutas.html" title="Rutas">Rutas</a>
+      <a href="meteorologia.html" title="Información de la meteorología">Meteorología</a>
+      <a href="juego.html" title="Juego">Juego</a>
+      <a href="reservas.php" title="Reservas">Reservas</a>
+      <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
+    </nav>
+  </header>
 
-            <button type="button" aria-label="Ver imagen anterior">
-              Anterior
-            </button>
-            <button type="button" aria-label="Ver imagen siguiente">
-              Siguiente
-            </button>
-          </figure>
-        </article>
-      </section>
+  <!-- Migas de navegación -->
+  <p>Estas en: Inicio</p>
 
-      <section>
-        <h2>Últimas Noticias</h2>
-        <p>Cargando actualidad de la provincia...</p>
-      </section>
-    </main>
+  <main>
+    <section>
+      <h2>Explora Las Palmas</h2>
+      <article>
+        <h3>Galería de Imágenes</h3>
+        <figure>
+          <picture>
+            <source media="(max-width: 465px)" srcset="multimedia/mapa_las_palmas_movil.jpg" />
+            <source media="(max-width: 799px)" srcset="multimedia/mapa_las_palmas_tablet.jpg" />
+            <img src="multimedia/mapa_las_palmas.jpg" alt="Mapa de situación de la provincia de Las Palmas" />
+          </picture>
 
-    <footer>
-      <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
-      <p>
-        Grado en Ingeniería Informática del Software - Escuela de Ingeniería
-        Informática de Oviedo
-      </p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/carrusel.js"></script>
-    <script src="js/noticias.js"></script>
-  </body>
+          <button type="button" aria-label="Ver imagen anterior">
+            Anterior
+          </button>
+          <button type="button" aria-label="Ver imagen siguiente">
+            Siguiente
+          </button>
+          <figcaption>Mapa de situación de la provincia</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section>
+      <h2>Últimas Noticias</h2>
+      <p>Cargando actualidad de la provincia...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Proyecto de Software y Estándares para la Web</p>
+    <p>
+      Grado en Ingeniería Informática del Software - Escuela de Ingeniería
+      Informática de Oviedo
+    </p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/noticias.js"></script>
+</body>
+
 </html>
