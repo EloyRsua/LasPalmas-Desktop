@@ -12,7 +12,8 @@ body {
 
 /* ESPECIFICIDAD: 0,0,1 */
 a {
-    color: #005180; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #005180;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     text-decoration: none;
     /* Contraste: a sobre bg body 7.62 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
@@ -20,14 +21,16 @@ a {
 
 /* ESPECIFICIDAD: 0,1,1 */
 a:hover {
-    color: #0D0D0D; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #0D0D0D;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     /* Contraste: a:hover sobre bg body 17.56 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
 
 /* ESPECIFICIDAD: 0,1,1 */
 a.activo {
-    color: #003D5F; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #003D5F;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     font-weight: bold;
     /* Contraste: a.activo sobre bg body 10.35 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
@@ -36,9 +39,10 @@ a.activo {
 /** MIGAS DE NAVEGACIÓN **/
 
 /* ESPECIFICIDAD: 0,0,2 */
-header + p {
-    font-size: 0.85rem; 
-    color: #525252; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+header+p {
+    font-size: 0.85rem;
+    color: #525252;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     /* Contraste: migas sobre bg body 7.06 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de body (#F5F5DC) */
 }
@@ -46,8 +50,10 @@ header + p {
 /** ESTRUCTURA Y NAVEGACIÓN **/
 
 /* ESPECIFICIDAD: 0,0,1 */
-header, footer {
-    background-color: #004685; /* Advertencia: Hay un color de fondo establecido y no hay color de primer plano */ 
+header,
+footer {
+    background-color: #004685;
+    /* Advertencia: Hay un color de fondo establecido y no hay color de primer plano */
     padding: 1rem;
     border-radius: 0.8rem;
     /* Advertencia herencia: El color de primer plano se hereda de body (#333333). 
@@ -56,7 +62,8 @@ header, footer {
 
 /* ESPECIFICIDAD: 0,0,2 */
 header a {
-    color: #FFFFFF; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #FFFFFF;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     text-decoration: none;
     font-weight: 500;
     /* Contraste: color sobre bg header 9.48 (Nivel AAA) */
@@ -65,14 +72,16 @@ header a {
 
 /* ESPECIFICIDAD: 0,1,2 */
 nav a.activo {
-    color: #FFDE66; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #FFDE66;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     /* Contraste: color sobre bg header 7.17 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de nav, que lo hereda de header (#004685) */
 }
 
 /* ESPECIFICIDAD: 0,1,2 */
 header a:hover {
-    color: #CAECFC; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #CAECFC;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     /* Contraste: color sobre bg header 7.63 (Nivel AAA) */
     /* Advertencia herencia: El color de fondo se hereda de header (#004685) */
 }
@@ -99,7 +108,8 @@ dt {
 table {
     width: 100%;
     margin: 2rem 0;
-    background-color: #FFFFFF; /* Advertencia: Hay un color de fondo establecido y no hay color de primer plano */ 
+    background-color: #FFFFFF;
+    /* Advertencia: Hay un color de fondo establecido y no hay color de primer plano */
     border-collapse: collapse;
     /* Advertencia herencia: El color de primer plano se hereda de body (#333333) */
 }
@@ -138,9 +148,10 @@ footer p {
     /* El color de primer plano se hereda de footer (#FFFFFF). 
        Contraste sobre bg footer (#004685): 9.48 (Nivel AAA) */
 }
+
 /* ESPECIFICIDAD: 0,0,2 */
 /* Contenedor de noticias: la sección que sigue al carrusel */
-main section + section {
+main section+section {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 0.1rem solid #004685;
@@ -156,7 +167,8 @@ main section article {
 /* ESPECIFICIDAD: 0,0,4 */
 /* Titulares de las noticias */
 main section article h3 {
-    color: #003D5F; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #003D5F;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     font-size: 1.35rem;
     margin: 0.5rem 0;
     /* Advertencia: El color de fondo se hereda de body (#F5F5DC) */
@@ -174,7 +186,8 @@ main section article p {
 /* ESPECIFICIDAD: 0,0,5 */
 /* Enlaces a la noticia completa */
 main section article p a {
-    color: #005A8D; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #005A8D;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     text-decoration: underline;
     font-weight: 500;
     /* Advertencia: El color de fondo se hereda de body */
@@ -184,7 +197,8 @@ main section article p a {
 /* ESPECIFICIDAD: 0,1,5 */
 /* Interacción con el enlace */
 main section article p a:hover {
-    color: #00A3E0; /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
+    color: #00A3E0;
+    /* Advertencia: Hay un color de primer plano establecido y no hay color de fondo */
     /* Advertencia: El color de fondo se hereda de body */
 
 }
@@ -192,15 +206,20 @@ main section article p a:hover {
 /* ESPECIFICIDAD: 0,0,2 */
 /* Contenedor de la galería para limitar su tamaño máximo */
 main figure {
+    width: 100%;
     max-width: 50em;
-    position: relative; /* Necesario para posicionar los botones dentro */
+    position: relative;
+    /* Necesario para posicionar los botones dentro */
 }
 
-/* ESPECIFICIDAD: 0,0,3 */
+/* ESPECIFICIDAD: 0,0,3 ESPECIFICIDAD: 0,0,3*/
+
 /* Imagen adaptable al 100% del contenedor  */
+main figure picture,
 main figure img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 0.5rem;
 }
 
@@ -216,14 +235,17 @@ main figure button {
 
 /** COMPLEMENTOS DE RUTAS Y MAPAS (SIN CLASES NI IDS) **/
 
+/* ESPECIFICIDAD: 0,0,2 */
 /* Gráfico SVG de altimetría responsivo */
 article svg {
     width: 100%;
+    max-width: 37.5rem;
     height: auto;
     display: block;
     margin: 1em 0;
 }
 
+/* ESPECIFICIDAD: 0,0,2 */
 /* Contenedor del mapa dinámico */
 article figure {
     width: 100%;
@@ -235,6 +257,7 @@ article figure {
     z-index: 1;
 }
 
+/* ESPECIFICIDAD: 0,0,2 */
 /* Imagen principal de la ruta */
 article img {
     max-width: 18rem;
@@ -244,6 +267,7 @@ article img {
     border-radius: 0.5rem;
 }
 
+/* ESPECIFICIDAD: 0,0,4 */
 /* Imágenes de los hitos */
 article ol li img {
     max-width: 12rem;

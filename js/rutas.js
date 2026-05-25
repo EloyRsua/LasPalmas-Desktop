@@ -277,7 +277,16 @@ class CargadorKML {
               }).addTo(map);
 
               // 1. Dibujar el trayecto lineal (LineString)
-              const coordinatesText = $(kmlData).find("LineString coordinates").text().trim();
+              const coordinatesElements = kmlData.getElementsByTagName("coordinates");
+              let coordinatesText = "";
+              for (let i = 0; i < coordinatesElements.length; i++) {
+                const parent = coordinatesElements[i].parentNode;
+                if (parent && (parent.nodeName === "LineString" || parent.localName === "LineString")) {
+                  coordinatesText = coordinatesElements[i].textContent.trim();
+                  break;
+                }
+              }
+
               if (coordinatesText) {
                 const coords = coordinatesText.split(/\s+/).map(line => {
                   const parts = line.split(",");
@@ -291,24 +300,31 @@ class CargadorKML {
               }
 
               // 2. Colocar marcadores en los hitos (Placemarks con Point)
-              $(kmlData).find("Placemark").each(function() {
-                const name = $(this).find("name").text();
+              const placemarks = kmlData.getElementsByTagName("Placemark");
+              for (let i = 0; i < placemarks.length; i++) {
+                const pm = placemarks[i];
+                const nameNode = pm.getElementsByTagName("name")[0];
+                const name = nameNode ? nameNode.textContent.trim() : "";
                 if (/punto\s+de\s+paso/i.test(name)) {
-                  return;
+                  continue;
                 }
 
-                const desc = $(this).find("description").text();
-                const point = $(this).find("Point");
+                const descNode = pm.getElementsByTagName("description")[0];
+                const desc = descNode ? descNode.textContent.trim() : "";
                 
-                if (point.length > 0) {
-                  const coords = point.find("coordinates").text().trim().split(",");
-                  const lat = parseFloat(coords[1]);
-                  const lon = parseFloat(coords[0]);
-                  if (!isNaN(lat) && !isNaN(lon)) {
-                    L.marker([lat, lon]).addTo(map).bindPopup(`${name}<br>${desc}`);
+                const pointElements = pm.getElementsByTagName("Point");
+                if (pointElements.length > 0) {
+                  const coordNode = pointElements[0].getElementsByTagName("coordinates")[0];
+                  if (coordNode) {
+                    const coords = coordNode.textContent.trim().split(",");
+                    const lat = parseFloat(coords[1]);
+                    const lon = parseFloat(coords[0]);
+                    if (!isNaN(lat) && !isNaN(lon)) {
+                      L.marker([lat, lon]).addTo(map).bindPopup(`${name}<br>${desc}`);
+                    }
                   }
                 }
-              });
+              }
             }
           } catch (err) {
             console.error("Error al procesar el KML:", err);
