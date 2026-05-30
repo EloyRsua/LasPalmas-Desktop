@@ -21,7 +21,15 @@ $reservaModel = new Reserva($db);
 
 $mensaje = "";
 $tipoMensaje = ""; // 'success' o 'error'
-$presupuesto = null;
+
+// Procesar descarte de presupuesto vía GET
+if (isset($_GET['accion']) && $_GET['accion'] === 'descartar') {
+    unset($_SESSION['presupuesto']);
+    header("Location: reservas.php");
+    exit();
+}
+
+$presupuesto = $_SESSION['presupuesto'] ?? [];
 
 // Procesar Acciones (Formularios)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -110,15 +118,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $mensaje = "No hay suficientes plazas disponibles. (Disponibles: {$disponibles})";
                         $tipoMensaje = "error";
                     } else {
-                        // Presupuesto temporal
-                        $total = $recurso['precio'] * $plazas;
-                        $presupuesto = [
-                            'recurso_id' => $id_recurso,
-                            'nombre_recurso' => $recurso['nombre'],
-                            'precio_unitario' => $recurso['precio'],
-                            'plazas' => $plazas,
-                            'total' => $total
-                        ];
+                        // Inicializar presupuesto en sesión si no existe
+                        if (!isset($_SESSION['presupuesto'])) {
+                            $_SESSION['presupuesto'] = [];
+                        }
+
+                        // Comprobar si el recurso ya está en el presupuesto para acumular plazas
+                        $encontrado = false;
+                        foreach ($_SESSION['presupuesto'] as &$item) {
+                            if ($item['recurso_id'] === $id_recurso) {
+                                $nuevas_plazas = $item['plazas'] + $plazas;
+                                if ($nuevas_plazas > $disponibles) {
+                                    $mensaje = "No hay suficientes plazas disponibles en total para añadir más. (Disponibles: {$disponibles})";
+                                    $tipoMensaje = "error";
+                                } else {
+                                    $item['plazas'] = $nuevas_plazas;
+                                    $item['total'] = $item['precio_unitario'] * $nuevas_plazas;
+                                    $mensaje = "Se han añadido {$plazas} plazas adicionales a la actividad '{$recurso['nombre']}'.";
+                                    $tipoMensaje = "success";
+                                }
+                                $encontrado = true;
+                                break;
+                            }
+                        }
+                        unset($item);
+
+                        // Si no estaba en el presupuesto, agregarlo como nuevo item
+                        if (!$encontrado) {
+                            $total = $recurso['precio'] * $plazas;
+                            $_SESSION['presupuesto'][] = [
+                                'recurso_id' => $id_recurso,
+                                'nombre_recurso' => $recurso['nombre'],
+                                'precio_unitario' => $recurso['precio'],
+                                'plazas' => $plazas,
+                                'total' => $total
+                            ];
+                            $mensaje = "Actividad '{$recurso['nombre']}' añadida al presupuesto.";
+                            $tipoMensaje = "success";
+                        }
+
+                        $presupuesto = $_SESSION['presupuesto'];
                     }
                 }
             }
@@ -130,38 +169,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!isset($_SESSION['usuario_id'])) {
             $mensaje = "Sesión caducada. Inicia sesión de nuevo.";
             $tipoMensaje = "error";
+        } elseif (empty($_SESSION['presupuesto'])) {
+            $mensaje = "No hay ningún presupuesto generado para confirmar.";
+            $tipoMensaje = "error";
         } else {
-            $id_recurso = intval($_POST['recurso_id'] ?? 0);
-            $plazas = intval($_POST['plazas'] ?? 0);
-
-            if ($id_recurso <= 0 || $plazas <= 0) {
-                $mensaje = "Datos de reserva inválidos.";
-                $tipoMensaje = "error";
-            } else {
+            // Verificar disponibilidad de todos los recursos antes de confirmar
+            $todoValido = true;
+            $errores = [];
+            
+            foreach ($_SESSION['presupuesto'] as $item) {
+                $id_recurso = $item['recurso_id'];
+                $plazas = $item['plazas'];
+                
                 $recurso = $recursoModel->obtenerPorId($id_recurso);
                 if (!$recurso) {
-                    $mensaje = "El recurso ya no está disponible.";
-                    $tipoMensaje = "error";
+                    $todoValido = false;
+                    $errores[] = "El recurso '{$item['nombre_recurso']}' ya no está disponible.";
                 } else {
                     $disponibles = $recursoModel->obtenerPlazasDisponibles($id_recurso);
                     if ($plazas > $disponibles) {
-                        $mensaje = "Lamentablemente, ya no hay suficientes plazas libres.";
-                        $tipoMensaje = "error";
-                    } else {
-                        // Crear la reserva
-                        $reservaModel->id_usuario = $_SESSION['usuario_id'];
-                        $reservaModel->id_recurso = $id_recurso;
-                        $reservaModel->plazas_reservadas = $plazas;
-                        $reservaModel->total_pagar = $recurso['precio'] * $plazas;
-
-                        if ($reservaModel->crear()) {
-                            $mensaje = "¡Reserva confirmada con éxito! Se ha registrado el recurso.";
-                            $tipoMensaje = "success";
-                        } else {
-                            $mensaje = "Ocurrió un error al procesar tu reserva.";
-                            $tipoMensaje = "error";
-                        }
+                        $todoValido = false;
+                        $errores[] = "No hay suficientes plazas para '{$item['nombre_recurso']}' (Solicitadas: {$plazas}, Disponibles: {$disponibles}).";
                     }
+                }
+            }
+            
+            if (!$todoValido) {
+                $mensaje = implode(" | ", $errores);
+                $tipoMensaje = "error";
+            } else {
+                // Registrar cada una de las actividades del presupuesto
+                $exitos = 0;
+                $fallos = 0;
+                foreach ($_SESSION['presupuesto'] as $item) {
+                    $reservaModel->id_usuario = $_SESSION['usuario_id'];
+                    $reservaModel->id_recurso = $item['recurso_id'];
+                    $reservaModel->plazas_reservadas = $item['plazas'];
+                    $reservaModel->total_pagar = $item['total'];
+
+                    if ($reservaModel->crear()) {
+                        $exitos++;
+                    } else {
+                        $fallos++;
+                    }
+                }
+                
+                if ($fallos === 0) {
+                    $mensaje = "¡Reserva confirmada con éxito! Se han registrado tus actividades.";
+                    $tipoMensaje = "success";
+                    unset($_SESSION['presupuesto']);
+                    $presupuesto = [];
+                } else {
+                    $mensaje = "Se registraron {$exitos} reservas con éxito, pero fallaron {$fallos}.";
+                    $tipoMensaje = "error";
+                    unset($_SESSION['presupuesto']);
+                    $presupuesto = [];
                 }
             }
         }
@@ -298,36 +360,48 @@ if (isset($_SESSION['usuario_id'])) {
         <?php endif; ?>
 
         <!-- Visualización del Presupuesto (si se ha generado) -->
-        <?php if ($presupuesto): ?>
+        <?php if (!empty($presupuesto)): ?>
             <section>
                 <h3>Presupuesto Generado</h3>
                 <p>Por favor, revisa los detalles antes de confirmar la reserva.</p>
                 <table>
+                    <caption>Resumen de los recursos solicitados en tu presupuesto actual</caption>
                     <thead>
                         <tr>
-                            <th>Recurso Turístico</th>
-                            <th>Precio Unitario</th>
-                            <th>Plazas Solicitadas</th>
+                            <th scope="col" id="pres_recurso">Recurso Turístico</th>
+                            <th scope="col" id="pres_precio">Precio Unitario</th>
+                            <th scope="col" id="pres_plazas">Plazas Solicitadas</th>
+                            <th scope="col" id="pres_importe">Importe</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php 
+                        $totalAcumulado = 0;
+                        $i = 1;
+                        foreach ($presupuesto as $item): 
+                            $totalAcumulado += $item['total'];
+                            $rowId = "pres_item" . $i;
+                        ?>
+                            <tr>
+                                <th scope="row" id="<?php echo $rowId; ?>"><?php echo htmlspecialchars($item['nombre_recurso']); ?></th>
+                                <td headers="pres_recurso <?php echo $rowId; ?> pres_precio"><?php echo number_format($item['precio_unitario'], 2); ?> €</td>
+                                <td headers="pres_recurso <?php echo $rowId; ?> pres_plazas"><?php echo $item['plazas']; ?></td>
+                                <td headers="pres_recurso <?php echo $rowId; ?> pres_importe"><?php echo number_format($item['total'], 2); ?> €</td>
+                            </tr>
+                        <?php 
+                            $i++;
+                        endforeach; 
+                        ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($presupuesto['nombre_recurso']); ?></td>
-                            <td><?php echo number_format($presupuesto['precio_unitario'], 2); ?> €</td>
-                            <td><?php echo $presupuesto['plazas']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Importe Total a Confirmar:</th>
-                            <td><?php echo number_format($presupuesto['total'], 2); ?> €</td>
+                            <th scope="row" id="pres_total_label" colspan="3">Importe Total a Confirmar:</th>
+                            <td headers="pres_total_label pres_importe"><strong><?php echo number_format($totalAcumulado, 2); ?> €</strong></td>
                         </tr>
                     </tbody>
                 </table>
                 <form action="reservas.php" method="POST">
                     <input type="hidden" name="accion" value="confirmar_reserva" />
-                    <input type="hidden" name="recurso_id" value="<?php echo $presupuesto['recurso_id']; ?>" />
-                    <input type="hidden" name="plazas" value="<?php echo $presupuesto['plazas']; ?>" />
                     <button type="submit">Confirmar y Pagar</button>
-                    <a href="reservas.php">Descartar Presupuesto</a>
+                    <a href="reservas.php?accion=descartar">Descartar Presupuesto</a>
                 </form>
             </section>
         <?php endif; ?>
@@ -337,25 +411,30 @@ if (isset($_SESSION['usuario_id'])) {
             <section>
                 <h3>Tus Recursos Reservados</h3>
                 <table>
+                    <caption>Listado de tus recursos turísticos reservados y confirmados</caption>
                     <thead>
                         <tr>
-                            <th>Recurso Turístico</th>
-                            <th>Fecha Actividad</th>
-                            <th>Plazas Reservadas</th>
-                            <th>Precio Unitario</th>
-                            <th>Total Pagado</th>
-                            <th>Acciones</th>
+                            <th scope="col" id="res_recurso">Recurso Turístico</th>
+                            <th scope="col" id="res_fecha">Fecha Actividad</th>
+                            <th scope="col" id="res_plazas">Plazas Reservadas</th>
+                            <th scope="col" id="res_precio">Precio Unitario</th>
+                            <th scope="col" id="res_total">Total Pagado</th>
+                            <th scope="col" id="res_acciones">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($reservasUsuario as $res): ?>
+                        <?php 
+                        $j = 1;
+                        foreach ($reservasUsuario as $res): 
+                            $rowId = "res_item" . $j;
+                        ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($res['nombre_recurso']); ?></td>
-                                <td><?php echo htmlspecialchars($res['fecha_inicio']); ?></td>
-                                <td><?php echo $res['plazas_reservadas']; ?></td>
-                                <td><?php echo number_format($res['precio'], 2); ?> €</td>
-                                <td><?php echo number_format($res['total_pagar'], 2); ?> €</td>
-                                <td>
+                                <th scope="row" id="<?php echo $rowId; ?>"><?php echo htmlspecialchars($res['nombre_recurso']); ?></th>
+                                <td headers="res_recurso <?php echo $rowId; ?> res_fecha"><?php echo htmlspecialchars($res['fecha_inicio']); ?></td>
+                                <td headers="res_recurso <?php echo $rowId; ?> res_plazas"><?php echo $res['plazas_reservadas']; ?></td>
+                                <td headers="res_recurso <?php echo $rowId; ?> res_precio"><?php echo number_format($res['precio'], 2); ?> €</td>
+                                <td headers="res_recurso <?php echo $rowId; ?> res_total"><?php echo number_format($res['total_pagar'], 2); ?> €</td>
+                                <td headers="res_recurso <?php echo $rowId; ?> res_acciones">
                                     <form action="reservas.php" method="POST" onsubmit="return confirm('¿Seguro que deseas anular esta reserva?');">
                                         <input type="hidden" name="accion" value="anular_reserva" />
                                         <input type="hidden" name="reserva_id" value="<?php echo $res['id']; ?>" />
@@ -363,7 +442,10 @@ if (isset($_SESSION['usuario_id'])) {
                                     </form>
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php 
+                            $j++;
+                        endforeach; 
+                        ?>
                     </tbody>
                 </table>
             </section>
