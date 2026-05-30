@@ -78,7 +78,7 @@ class Meteorologia {
     const weather = this.getWeatherInfo(current.weather_code);
     const html = `
       <article>
-        <h4>Condiciones actuales</h4>
+        <p>Condiciones actuales ${weather.icon}</p>
         <p>Estado: ${weather.desc} ${weather.icon}</p>
         <p>Temperatura: ${current.temperature_2m}°C</p>
         <p>Sensación térmica: ${current.apparent_temperature}°C</p>
@@ -92,7 +92,7 @@ class Meteorologia {
 
   renderPronostico(daily) {
     let listHtml = "<ul>";
-    
+
     for (let i = 0; i < 7; i++) {
       const weather = this.getWeatherInfo(daily.weather_code[i]);
       const dateText = this.formatDate(daily.time[i]);
@@ -100,11 +100,10 @@ class Meteorologia {
       const maxTemp = daily.temperature_2m_max[i];
       const windSpeed = daily.wind_speed_10m_max[i];
       const precip = daily.precipitation_sum[i];
-      
+
       listHtml += `
         <li>
-          <h4>${dateText}</h4>
-          <p>Estado: ${weather.desc} ${weather.icon}</p>
+          <p>${dateText}, ${weather.desc} ${weather.icon}</p>
           <p>Temperatura máxima: ${maxTemp}°C</p>
           <p>Temperatura mínima: ${minTemp}°C</p>
           <p>Viento máximo: ${windSpeed} km/h</p>
@@ -113,7 +112,7 @@ class Meteorologia {
       `;
     }
     listHtml += "</ul>";
-    
+
     $("main section:last-of-type").html("<h3>Previsión para los próximos 7 días</h3>" + listHtml);
   }
 }

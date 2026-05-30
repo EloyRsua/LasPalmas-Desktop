@@ -247,7 +247,7 @@ article svg {
 
 /* ESPECIFICIDAD: 0,0,3 */
 /* Contenedor del mapa dinámico */
-main section > figure {
+main section>figure {
     width: 100%;
     max-width: none;
     height: 25rem;

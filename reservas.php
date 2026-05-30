@@ -285,7 +285,7 @@ if (isset($_SESSION['usuario_id'])) {
             <a href="rutas.html" title="Rutas">Rutas</a>
             <a href="meteorologia.html" title="Información de la meteorología">Meteorología</a>
             <a href="juego.html" title="Juego">Juego</a>
-            <a href="reservas.php" title="Reservas">Reservas</a>
+            <a href="reservas.php" title="Reservas" class="activo">Reservas</a>
             <a href="ayuda.html" title="Página de ayuda">Ayuda</a>
         </nav>
     </header>
@@ -394,7 +394,7 @@ if (isset($_SESSION['usuario_id'])) {
                         ?>
                         <tr>
                             <th scope="row" id="pres_total_label" colspan="3">Importe Total a Confirmar:</th>
-                            <td headers="pres_total_label pres_importe"><strong><?php echo number_format($totalAcumulado, 2); ?> €</strong></td>
+                            <td headers="pres_total_label pres_importe"><?php echo number_format($totalAcumulado, 2); ?> €</td>
                         </tr>
                     </tbody>
                 </table>
