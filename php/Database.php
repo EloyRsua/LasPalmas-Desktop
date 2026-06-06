@@ -3,7 +3,7 @@ class Database {
     private $host = "localhost";
     private $db_name = "reservas";
     private $username = "DBUSER2026";
-    private $password = "DBPSWD2026";
+    private $password = "DBPWD2026";
     private $conn = null;
 
     public function getConnection() {
@@ -11,45 +11,40 @@ class Database {
             return $this->conn;
         }
 
-        try {
-            // Conectar a MySQL
-            $this->conn = new PDO("mysql:host=" . $this->host, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            // Crear base de datos si no existe
-            $this->conn->exec("CREATE DATABASE IF NOT EXISTS `" . $this->db_name . "` CHARACTER SET utf8 COLLATE utf8_general_ci;");
-            $this->conn->exec("USE `" . $this->db_name . "`;");
-            
-            // Verificar si las tablas existen, si no, crearlas e inicializarlas
-            $this->verificarEInicializarDB();
-            
-        } catch (PDOException $exception) {
-            // Intentar conectar con host 127.0.0.1 por si acaso localhost da problemas en algunos entornos macOS/MAMP
+        // Lista de hosts para intentar la conexión (por si localhost da problemas en macOS/MAMP)
+        $hosts = ["localhost", "127.0.0.1"];
+        $ultimoError = null;
+
+        foreach ($hosts as $h) {
             try {
-                $this->host = "127.0.0.1";
+                $this->host = $h;
+                // Conectar a MySQL
                 $this->conn = new PDO("mysql:host=" . $this->host, $this->username, $this->password);
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
+                // Crear base de datos si no existe
                 $this->conn->exec("CREATE DATABASE IF NOT EXISTS `" . $this->db_name . "` CHARACTER SET utf8 COLLATE utf8_general_ci;");
                 $this->conn->exec("USE `" . $this->db_name . "`;");
+                
+                // Verificar si las tablas existen, si no, crearlas e inicializarlas
                 $this->verificarEInicializarDB();
-            } catch (PDOException $e2) {
-                die("Error de conexión a la base de datos: " . $e2->getMessage());
+                
+                return $this->conn;
+            } catch (PDOException $exception) {
+                $ultimoError = $exception;
+                $this->conn = null; // Asegurar que queda nulo si este host falla
             }
         }
 
-        return $this->conn;
+        // Si todos los hosts fallaron, abortar
+        die("Error de conexión a la base de datos: " . $ultimoError->getMessage());
     }
 
     private function verificarEInicializarDB() {
-        // Comprobar si existe la tabla 'usuarios'
-        $tablasExistentes = true;
         try {
+            // Comprobar si existe la tabla 'usuarios'. Si falla la consulta, ejecutamos el script SQL.
             $this->conn->query("SELECT 1 FROM usuarios LIMIT 1");
         } catch (Exception $e) {
-            $tablasExistentes = false;
-        }
-
-        if (!$tablasExistentes) {
             $this->ejecutarScriptSQL();
         }
 
@@ -84,19 +79,13 @@ class Database {
                     continue; // Ya contiene datos, pasar a la siguiente tabla
                 }
             } catch (Exception $e) {
-                // Si la tabla no existe todavía, saltar para evitar errores
-                continue;
+                continue; // Si la tabla no existe o falla, saltar para evitar errores
             }
 
             // Mapear el nombre del archivo CSV (recursos_turisticos usa recursos.csv)
             $nombreCsv = ($tabla === 'recursos_turisticos') ? 'recursos' : $tabla;
             $csvPath = __DIR__ . '/' . $nombreCsv . '.csv';
-            if (!file_exists($csvPath)) {
-                continue;
-            }
-
-            $file = fopen($csvPath, 'r');
-            if (!$file) {
+            if (!file_exists($csvPath) || !($file = fopen($csvPath, 'r'))) {
                 continue;
             }
 
@@ -109,14 +98,9 @@ class Database {
             $stmt = $this->conn->prepare($query);
 
             while (($row = fgetcsv($file)) !== false) {
-                // Rellenar con nulos si faltan campos
-                while (count($row) < count($campos)) {
-                    $row[] = null;
-                }
-                // Cortar si sobran
-                if (count($row) > count($campos)) {
-                    $row = array_slice($row, 0, count($campos));
-                }
+                // Rellenar con nulos si faltan campos o cortar si sobran utilizando array_slice y array_pad
+                $row = array_pad(array_slice($row, 0, count($campos)), count($campos), null);
+                
                 try {
                     $stmt->execute($row);
                 } catch (Exception $e) {

@@ -13,15 +13,15 @@ class Noticias {
 
     buscar() {
         const urlCompleta = `${this.url}?api_token=${this.apikey}&search=${this.busqueda}&language=es&limit=3`;
-        fetch(urlCompleta)
-            .then(response => {
-                if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
-                return response.json();
-            })
-            .then(datos => this.procesarInformacion(datos))
-            .catch(error => {
-                this.contenedor.find("p").text("Error al cargar las noticias: " + error.message);
-            });
+        $.ajax({
+            url: urlCompleta,
+            method: "GET",
+            dataType: "json",
+            success: (datos) => this.procesarInformacion(datos),
+            error: (xhr, status, error) => {
+                this.contenedor.find("p").text("Error al cargar las noticias: " + error);
+            }
+        });
     }
 
     procesarInformacion(datos) {

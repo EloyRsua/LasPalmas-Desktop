@@ -271,7 +271,7 @@ if (isset($_SESSION['usuario_id'])) {
     
     <!-- Estilos base del proyecto -->
     <link rel="stylesheet" href="estilo/layout.css" />
-    <link rel="stylesheet" href="estilo/estilos.css" />
+    <link rel="stylesheet" href="estilo/estilo.css" />
 
 </head>
 <body>
